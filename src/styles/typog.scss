@@ -1,0 +1,319 @@
+/*
+@font-face {
+  font-family:Arvil;
+  src: url('../fonts/Arvil/Arvil_Sans.ttf'),
+  url('../fonts/Arvil/Arvil_Sans.woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-family:Anton;
+  src: url('../fonts/Anton/Anton-Regular.ttf'),
+  url('../fonts/Anton/Anton-Regular.woff');
+}
+
+@font-face {
+  font-family:Lora;
+  src: url('../fonts/Lora/Lora-Regular.ttf'),
+  url('../fonts/Lora/Lora-Regular.woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lowvetica;
+  src: url("../fonts/Lowvetica/Lowvetica.ttf") format("opentype"),
+  url("../fonts/Lowvetica/Lowvetica.woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Viga;
+  src: url("../fonts/Viga/Viga-Regular.ttf") format("opentype"),
+  url('../fonts/Viga/Viga-Regular.woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Tenor_Sans;
+  src: url("../fonts/Tenor_Sans/TenorSans-Regular.ttf") format("opentype"),
+  url('../fonts/Tenor_Sans/TenorSans-Regular.woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Gudea;
+  src: url("../fonts/Gudea/Gudea-Regular.ttf") format("opentype"),
+  url('../fonts/Gudea/Gudea-Regular.woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: GudeaBold;
+  src: url("../fonts/Gudea/Gudea-Bold.ttf") format("opentype"),
+  url('../fonts/Gudea/Gudea-Bold.woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: FjallaOne;
+  src: url("../fonts/Fjalla_One/FjallaOne-Regular.ttf") format("opentype"),
+  url('../fonts/Fjalla_One/FjallaOne-Regular.woff');
+}
+*/
+div {
+  h4 {
+    font-family:Anton, sans-serif;
+    font-size: 1.3em;
+    line-height:24px;
+  }
+}
+
+
+p {
+  font-family:Anton, sans-serif;
+  font-size:1em;
+  line-height:24px;
+}
+
+.linkage {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:1em;
+  font-style: oblique;
+  font-weight: 100;
+  color:#303030;
+
+  a {
+    color: #1A936F;
+  }
+
+  a:hover {
+    color: #011936;
+  }
+
+
+  div {
+    vertical-align:top;
+    margin: 0 0 0 0;
+    color: #011936;
+    width: 100%;
+  }
+}
+
+.textHeader {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Arvil, Arial, sans-serif;
+  padding-bottom:14px;
+
+  h1 {
+    font-family: Gudea, Arvil,sans-serif;
+    font-size: 1.7em;
+    font-weight: normal;
+    color: #306063;
+    margin: 0 0 0 0;
+  }
+
+  h3 {
+    font-family: Arvil,sans-serif;
+    font-size: 1.9em;
+    font-weight: normal;
+    letter-spacing: .05em;
+    color: #08907e;
+    margin: 0 0 0 0;
+  }
+
+  h4 {
+    font-family: Arvil,sans-serif;
+    font-size: 1.50em;
+    font-weight: normal;
+    letter-spacing: .03em;
+    color: #08907e;
+    margin: 10px 0 0 0;
+  }
+
+  h5 {
+    font-family: Arvil,sans-serif;
+    font-size: 1.25em;
+    font-weight: normal;
+    letter-spacing: .084em;
+    color: #08403e;
+    margin: 0 0 0 0;
+  }
+
+}
+
+@mixin typog-desktop() {
+
+  .textHeader {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h1 {
+      font-size: 1.65em;
+      font-weight: normal;
+      letter-spacing: .08em;
+      color: #306063;
+      margin: 0 0 0 0;
+    }
+
+    h3 {
+      font-size: 2em;
+      font-weight: normal;
+      letter-spacing: .05em;
+      color: #08907e;
+      margin: 0 0 0 0;
+    }
+
+    h4 {
+      font-size: 1em;
+      font-weight: normal;
+      letter-spacing: .075em;
+      color: #08907e;
+      margin: 5px 0 0 0;
+    }
+
+    h5 {
+      font-size: 1.25em;
+      font-weight: normal;
+      letter-spacing: .084em;
+      color: #08403e;
+      margin: 0 0 0 0;
+    }
+
+  }
+}
+
+@mixin typog-tablet() {
+
+  .textHeader {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h1 {
+      font-size: 1em;
+      font-weight: normal;
+      letter-spacing: .08em;
+      color: #306063;
+      margin: 0 0 0 0;
+    }
+
+    h3 {
+      font-size: 2em;
+      font-weight: normal;
+      letter-spacing: .05em;
+      color: #08907e;
+      margin: 0 0 0 0;
+    }
+
+    h4 {
+      font-size: .65em;
+      font-weight: normal;
+      letter-spacing: .075em;
+      color: #08907e;
+      margin: 20px 0 0 0;
+    }
+
+    h5 {
+      font-size: 1.25em;
+      font-weight: normal;
+      letter-spacing: .084em;
+      color: #08403e;
+      margin: 0 0 0 0;
+    }
+
+  }
+}
+
+@mixin typog-mobile() {
+
+  .textHeader {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h1 {
+      font-size: 1em;
+      font-weight: normal;
+      letter-spacing: .08em;
+      color: #306063;
+      margin: 0 0 0 0;
+    }
+
+    h3 {
+      font-size: 1.7em;
+      font-weight: normal;
+      letter-spacing: .05em;
+      color: #08907e;
+      margin: 0 0 0 0;
+    }
+
+    h4 {
+      font-size: .75em;
+      font-weight: normal;
+      letter-spacing: .075em;
+      color: #08907e;
+      margin: 20px 0 0 0;
+    }
+
+    h5 {
+      font-size: 1.25em;
+      font-weight: normal;
+      letter-spacing: .084em;
+      color: #08403e;
+      margin: 0 0 0 0;
+    }
+
+  }
+}
+
+@mixin typog-tiny() {
+
+  .textHeader {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h1 {
+      font-size: 1em;
+      font-weight: normal;
+      letter-spacing: .08em;
+      color: #306063;
+      margin: 0 0 0 0;
+    }
+
+    h3 {
+      font-size: 2em;
+      font-weight: normal;
+      letter-spacing: .05em;
+      color: #08907e;
+      margin: 0 0 0 0;
+    }
+
+    h4 {
+      font-size: .65em;
+      font-weight: normal;
+      letter-spacing: .075em;
+      color: #08907e;
+      margin: 20px 0 0 0;
+    }
+
+    h5 {
+      font-size: 1.25em;
+      font-weight: normal;
+      letter-spacing: .084em;
+      color: #08403e;
+      margin: 0 0 0 0;
+    }
+
+  }
+}

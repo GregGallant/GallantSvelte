@@ -1,0 +1,23 @@
+<script>
+    import gmedialogo from '$lib/images/gone_logo.png';
+</script>
+<footer>
+    <div class="footer">
+        <div class="foot-generic"><img src="{gmedialogo}" /></div>
+        <div class="foot_place_1">
+            <div>
+                <ul class="mini_footy">
+                    <!-- <li><a target="github" href="http://www.gallantmedia.net">Code</a></li> -->
+                    <li><a target="github" href="http://www.github.com/GregGallant">GitHub</a></li>
+                    <li><a target="linkedin" href="http://www.linkedin.com/in/greggallant">Linked-In</a></li>
+                    <!-- <li><a target="software" href="http://www.cronvega.com">Company</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="foot_addr" id="secc">
+            <div class="fhead">Programming, Design & Photography</div>
+            <div class="fname">by: Greg Gallant </div>
+            <div class="femail">ggallant2017@gmail.com </div>
+        </div>
+    </div>
+</footer>

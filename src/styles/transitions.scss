@@ -1,0 +1,19 @@
+.dialog-appear {
+  opacity: 0.01;
+  transform: scale(1);
+}
+
+.dialog-appear.dialog-appear-active {
+  opacity: 1;
+  transition: opacity 330ms ease-in;
+}
+
+.dialog-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dialog-exit.dialog-exit-active {
+  opacity: 0.01;
+  transition: opacity 330ms ease-in;
+}

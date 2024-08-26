@@ -1,0 +1,131 @@
+$footerBackground:#2a7f82;
+$footerHeight: 245px;
+$footerMinHeight: 245px;
+$footerMinHeightMobile: 190px;
+$footerMaxHeight: 300px;
+
+#gofooter {
+  position:relative;
+  bottom:0;
+  width:100%;
+}
+
+div {
+
+  .poweredby {
+    font-family:Arial,Helvetica,sans-serif;
+    color:#ffff4f;
+  }
+
+  &.footer {
+    min-height: $footerMinHeight;
+    max-height: $footerMaxHeight;
+    background-color: $footerBackground;
+    border-top:1px solid $lapis-lazuli;
+    padding:0 0 40px 0;
+    margin-top: 25px;
+
+    .foot-generic {
+      padding: 5px 0 0 0;
+      background-color:$body-back;
+      img {
+        max-width:175px;
+      }
+    }
+
+    div {
+
+      ul.mini_footy {
+        li {
+          display:block;
+          float:left;
+          clear:both;
+          text-decoration:none;
+          font-size:10pt;
+          padding-bottom:4px;
+          color:$lemon-meri;
+          a {
+            color:$lemon-meri;
+          }
+        }
+      }
+    }
+
+    .foot_place_1 {
+      padding:2px 10px 10px 25px;
+      text-align:left;
+
+
+    }
+
+    .foot_addr {
+      text-align:right;
+      span {
+        padding: 0 0 10px 0;
+        margin: 0 0 0 0;
+        color:$lemon-meri;
+        font-family: Lora, serif;
+      }
+      div {
+        padding: 0 30px 0 0;
+        color:#ffffff;
+        font-family:Helvetica, Arial, sans-serif;
+        font-size:.9em;
+        font-weight:bold;
+        &.fname {
+          font-weight:normal;
+          font-family:Lora,serif;
+          margin-bottom:10px;
+        }
+
+        &.femail {
+          font-weight:normal;
+          font-family:Lora,serif;
+          font-style:italic;
+          font-size:.7em;
+        }
+      }
+    }
+  }
+}
+
+@mixin footer-desktop() {
+  div {
+    &.footer {
+      min-height:$footerMinHeight;
+      padding-bottom:10px;
+      margin: 0 0 0 0;
+      background-color: $footerBackground;
+    }
+  }
+}
+
+@mixin footer-mobile() {
+  div {
+    &.footer {
+      min-height:$footerMinHeightMobile;
+      background-color: $footerBackground;
+      margin-top:0;
+      margin-bottom:0;
+      padding-bottom:40px;
+      .foot_addr div {
+        font-size:.8em;
+      }
+    }
+  }
+}
+
+@mixin footer-tiny() {
+  div {
+    &.footer {
+      min-height:$footerMinHeightMobile;
+      background-color: $footerBackground;
+      margin-top:0;
+      margin-bottom:0;
+      padding-bottom:40px;
+      .foot_addr div {
+        font-size:.8em;
+      }
+    }
+  }
+}

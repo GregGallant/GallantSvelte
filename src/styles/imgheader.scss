@@ -1,0 +1,1143 @@
+$hedHeight: 440px;
+$hedHeightUnfucked: 750px;
+
+div {
+  &.hed {
+    width:100%;
+    min-height:$hedHeight;
+    background-color: $midnight-green;
+    background: url('$lib/images/gohead.jpg') 40% 40% no-repeat;
+    background-size: cover;
+    border-top: 1px solid $queen-blue;
+    border-bottom: 1px solid $queen-blue;
+    text-align:left;
+
+    h1 {
+      text-transform: uppercase;
+      font-family: FjallaOne, Anton, Helvetica, Arial, sans-serif;
+      font-size: 3.2em;
+      color: $off-white;
+      padding: 40px 9px 0 20px;
+      letter-spacing:1.1px;
+      margin: 0;
+    }
+  }
+
+  &.subhed {
+    margin: 0 0 0 0;
+    span {
+      display: inline-block;
+      padding:6px 0 0 24px;
+      text-transform: uppercase;
+      font-family: FjallaOne, Anton, Helvetica, Arial, sans-serif;
+      font-size: 1.2em;
+      color: $light-meri;
+      font-weight:normal;
+      line-height:24px;
+      letter-spacing:1.5px;
+    }
+  }
+
+  &.contentHorizon {
+    display:block;
+    width:100%;
+    color:#292929;
+    font-family:FjallaOne, Helvetica, sans-serif;
+    font-size:2.3em;
+    text-align:center;
+    margin:0 auto;
+    padding:17px 0 50px 0;
+
+    background-attachment: fixed;
+    background-color: var(--color-bg-1);
+    background-size: 100vw 100vh;
+    background-image: radial-gradient(
+                    50% 50% at 50% 50%,
+                    rgba(155, 195, 255, 0.75) 0%,
+                    rgba(205, 225, 255, 0) 100%
+    ),
+    linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+
+    .flexHeader {
+      display: flex;
+      flex-direction: row;
+      text-align:center;
+      justify-content: center;
+      margin:0 auto;
+
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+
+        h4 {
+          display: block;
+          font-family: FjallaOne, Helvetica, sans-serif;
+          margin-left:5px;
+        }
+      }
+    }
+  }
+
+  &.contentHorizon2 {
+    display:block;
+    width:100%;
+    background-color:$flexHeader2;
+    color:$flexHeader2Text;
+    font-family:FjallaOne, Helvetica, sans-serif;
+    font-size:2.3em;
+    text-align:center;
+    margin:0 auto;
+    padding:17px 0 90px 0;
+
+    .flexHeader {
+      display: flex;
+      flex-direction: row;
+      text-align:center;
+      justify-content: center;
+    }
+    .skillHeader {
+      font-family: FjallaOne, Helvetica, sans-serif;
+      text-align:center;
+      padding-bottom:18px;
+      padding-top:18px;
+      padding-left:8px;
+
+      .frontend {
+        font-family: Tenor_Sans, Helvetica, sans-serif;
+        font-size:0.3em;
+        background-color:#e0e0e0;
+        color:#333333;
+        padding:3px;
+        margin:9px;
+      }
+
+      h4 {
+        font-family: Helvetica, sans-serif;
+        font-size:0.45em;
+        margin:8px;
+        padding:8px;
+        line-height:1.5em;
+      }
+
+      h6 {
+        font-family: Helvetica, sans-serif;
+        font-size:0.5em;
+        margin:8px;
+        padding:8px;
+        color:#ffdc73;
+        font-weight:normal;
+        line-height:1.7em;
+      }
+    }
+  }
+  &.contentHorizon3 {
+    display:block;
+    width:100%;
+    background-color:#ffebc6;
+    color:#292929;
+    font-family:FjallaOne, Helvetica, sans-serif;
+    font-size:2.3em;
+    text-align:center;
+    margin:0 auto;
+    padding:17px 0 50px 0;
+
+    .flexHeader {
+      display: flex;
+      flex-direction: row;
+      text-align:center;
+      justify-content: center;
+    }
+    .skillHeader {
+      font-family: FjallaOne, Helvetica, sans-serif;
+      text-align:center;
+      padding-bottom:18px;
+      padding-top:18px;
+    }
+    ul.skillpoints {
+      li {
+        font-family: sans-serif;
+        font-size:.4em;
+        margin:0 0 2em 0;
+        list-style: none;
+        background-color:#ffdca3;
+        padding:10px 10px 10px 20px;
+        border-radius:7px 7px 7px 7px;
+        text-align:left;
+        line-height:1.3em;
+      }
+    }
+  }
+  .monitor {
+    display:block;
+    color:#3f3f3f;
+    margin: 0;
+    padding:0 0 0 0;
+    width:362px;
+    height:290px;
+    top:0;
+    background-color:#01061c;
+    img {
+      position:relative;
+      padding:0;
+      margin:0;
+      vertical-align:top;
+      &.monbot {
+        top:-10px;
+      }
+    }
+  }
+
+  .clearme {
+    display:block;
+    clear:both;
+  }
+
+  &.centered {
+    display: block;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    text-align:center;
+  }
+
+  .skillHeader {
+    h4 {
+      margin:8px 8px 0 8px;
+      font-family: Helvetica, sans-serif;
+      font-size:.4em;
+      font-weight: normal;
+      letter-spacing:.08em;
+    }
+  }
+
+  .skilltext {
+    h5 {
+      display: flex;
+      justify-content: center;
+      width:320px;
+      text-align:center;
+      font-size: .4em;
+      padding:9px 8px 0 8px;
+      margin:0 0 0 0;
+      font-family: sans-serif;
+
+      a:link {
+        color:#fafff3;
+      }
+      a:visited {
+        color:#fafff3;
+      }
+      a:hover {
+        color:#3affaf;
+      }
+    }
+
+    h6 {
+      font-size: .3em;
+      margin:0 5px 0 5px;
+      padding:4px;
+      border-bottom:1px solid #797979;
+      font-family: sans-serif;
+    }
+
+  }
+  .skillbox {
+    background-color:#8dd3e0;
+    color:#3f3f3f;
+    border:2px solid #1a936f;
+    margin: 0 0 7px 15px;
+    padding:0 0 0 0;
+    width:320px;
+    min-height:240px;
+  }
+
+  .skillbox_clear {
+    color:#3f3f3f;
+    margin: 0;
+    padding:0;
+    width:320px;
+    height:240px;
+  }
+}
+
+
+
+  .monitor_wrap {
+    text-align:center;
+    margin: 0 9px 0 auto;
+
+    .monitor {
+      display:block;
+      color:#3f3f3f;
+      margin: 0;
+      padding:0 0 0 0;
+      width:362px;
+      height:290px;
+      top:0;
+      background-color:#01061c;
+      img {
+        position:relative;
+        padding:0;
+        margin:0;
+        vertical-align:top;
+        &.monbot {
+          top:-10px;
+        }
+      }
+    }
+  }
+
+// RESPONSIVE
+
+@mixin imgheader-desktop() {
+
+  div {
+    &.hed {
+      background-color: $midnight-green;
+      background: url('$lib/images/gohead.jpg') 40% 40% no-repeat;
+      background-size: 100% 100%;
+      border-top:1px solid $cadet-blue;
+      border-bottom:1px solid $cadet-blue;
+      text-align:left;
+      color: $mid-grey;
+    }
+
+    &.contentHorizon {
+      display:block;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      background-attachment: fixed;
+      background-color: var(--color-bg-1);
+      background-size: 100vw 100vh;
+      background-image: radial-gradient(
+                      50% 50% at 50% 50%,
+                      rgba(155, 195, 255, 0.75) 0%,
+                      rgba(205, 225, 255, 0) 100%
+      ),
+      linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+
+
+      .flexHeader {
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+    &.contentHorizon2 {
+      display:block;
+      background-color:$flexHeader2;
+      color:$flexHeader2Text;
+      font-family:FjallaOne, Helvetica, sans-serif;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 90px 0;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+    &.contentHorizon3 {
+      display:block;
+      background-color:#ffebc6;
+      color:#292929;
+      font-family: FjallaOne, Helvetica, sans-serif;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+
+    &.subhed {
+      margin-top:-10px;
+      font-size: 1.0em;
+
+      span {
+        line-height:1em;
+        margin: 0 0 0 0;
+      }
+    }
+
+    h4 {
+      font-family:Anton, sans-serif;
+      font-size: 1.3em;
+      line-height:14px;
+    }
+  }
+
+
+  .skilltext {
+    h5 {
+      display: flex;
+      justify-content: center;
+      width:320px;
+      text-align:center;
+      font-size: .4em;
+      padding:9px 8px 0 8px;
+      margin:0 0 0 0;
+      font-family: sans-serif;
+
+      a:link {
+        color:#fafff3;
+      }
+      a:visited {
+        color:#fafff3;
+      }
+      a:hover {
+        color:#3affaf;
+      }
+    }
+
+    h6 {
+      font-size: .3em;
+      margin:0 5px 0 5px;
+      padding:4px;
+      border-bottom:1px solid #797979;
+      font-family: sans-serif;
+    }
+
+  }
+  .skillbox {
+    background-color:#8dd3e0;
+    color:#3f3f3f;
+    border:2px solid #1a936f;
+    margin: 0 0 7px 15px;
+    padding:0 0 0 0;
+    width:320px;
+    min-height:240px;
+  }
+}
+
+@mixin imgheader-lgtab() {
+
+  div {
+    &.hed {
+      background-color: $midnight-green;
+      background: url('$lib/images/gohead.jpg') 40% 40% no-repeat;
+      background-size: 100% 100%;
+      border-top:1px solid $cadet-blue;
+      border-bottom:1px solid $cadet-blue;
+      text-align:left;
+      color: $mid-grey;
+    }
+
+    &.contentHorizon {
+      display:block;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      background-attachment: fixed;
+      background-color: var(--color-bg-1);
+      background-size: 100vw 100vh;
+      background-image: radial-gradient(
+                      50% 50% at 50% 50%,
+                      rgba(155, 195, 255, 0.75) 0%,
+                      rgba(205, 225, 255, 0) 100%
+      ),
+      linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+
+
+      .flexHeader {
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+    &.contentHorizon2 {
+      display:block;
+      background-color:$flexHeader2;
+      color:$flexHeader2Text;
+      font-family:FjallaOne, Helvetica, sans-serif;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 90px 0;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+
+        .frontend {
+          font-family: Tenor_Sans, Helvetica, sans-serif;
+          font-size:0.3em;
+          background-color:#e0e0e0;
+          color:#333333;
+          padding:3px;
+          margin:9px;
+          max-width:500px;
+        }
+
+        h4 {
+          font-family: Helvetica, sans-serif;
+          font-size:0.45em;
+          margin:8px;
+          padding:8px;
+          line-height:1.5em;
+          max-width:500px;
+        }
+
+        h6 {
+          font-family: Helvetica, sans-serif;
+          font-size:0.5em;
+          margin:8px;
+          padding:8px;
+          color:#ffdc73;
+          line-height:1.7em;
+          font-weight:normal;
+          max-width:500px;
+        }
+      }
+    }
+    &.contentHorizon3 {
+      display:block;
+      background-color:#ffebc6;
+      color:#292929;
+      font-family: FjallaOne, Helvetica, sans-serif;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: row;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+
+    &.subhed {
+      margin-top:-10px;
+      font-size: 1.0em;
+
+      span {
+        line-height:1em;
+        margin: 0 0 0 0;
+      }
+    }
+
+    h4 {
+      font-family:Anton, sans-serif;
+      font-size: 1.3em;
+      line-height:14px;
+    }
+  }
+
+
+  .skilltext {
+    h5 {
+      display: flex;
+      justify-content: center;
+      width:320px;
+      text-align:center;
+      font-size: .4em;
+      padding:9px 8px 0 8px;
+      margin:0 0 0 0;
+      font-family: sans-serif;
+
+      a:link {
+        color:#fafff3;
+      }
+      a:visited {
+        color:#fafff3;
+      }
+      a:hover {
+        color:#3affaf;
+      }
+    }
+
+    h6 {
+      font-size: .3em;
+      margin:0 5px 0 5px;
+      padding:4px;
+      border-bottom:1px solid #797979;
+      font-family: sans-serif;
+    }
+
+  }
+  .skillbox {
+    background-color:#8dd3e0;
+    color:#3f3f3f;
+    border:2px solid #1a936f;
+    margin: 0 0 7px 15px;
+    padding:0 0 0 0;
+    width:320px;
+    min-height:240px;
+  }
+
+
+}
+
+
+@mixin imgheader-tablet() {
+
+  .img-fluid {
+    max-width:190px;
+  }
+
+  div{
+    &.hed {
+      h1 {
+        margin-top:10px;
+        padding: 40px 9px 0 20px;
+        font-size: 2.1em;
+        line-height:.9em;
+      }
+    }
+
+    &.subhed {
+      span {
+        font-size:0.9em;
+        line-height:1.1em;
+        margin:5px 0 0 0;
+      }
+    }
+
+    &.contentHorizon {
+      display:block;
+      background-color:#f3f3ff;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      width: 100%;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        margin: 0 auto;
+
+          .skillbox {
+            display: block;
+            text-align: center;
+            margin: 0 auto 20px auto;
+            padding: 0 0 0 0;
+            max-width: 320px;
+            width:320px;
+          }
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+    &.contentHorizon2 {
+      display:block;
+      width:100%;
+      background-color:$flexHeader2;
+      color:$flexHeader2Text;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        .monitor_wrap {
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+          padding: 0 0 27px 0;
+          width:362px;
+          height:290px;
+          max-width: 362px;
+        }
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+    &.contentHorizon3 {
+      display:block;
+      width:100%;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: block;
+        text-align:center;
+        justify-content: center;
+        margin: 0 auto;
+
+        .skillbox_clear {
+          display:block;
+          text-align:center;
+          color:#3f3f3f;
+          margin: 0 auto;
+          padding:0;
+          max-width:320px;
+          width:320px;
+          height:240px;
+        }
+        ul.skillpoints {
+          display:block;
+          text-align:center;
+          margin:0 auto;
+          padding: 0;
+
+          li {
+            font-family: sans-serif;
+            font-size:.4em;
+            margin:0 15px 2em 15px;
+            list-style: none;
+            background-color:#ffdca3;
+            padding:10px 10px 10px 20px;
+            border-radius:7px 7px 7px 7px;
+            text-align:center;
+            line-height:1.3em;
+          }
+        }
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+  }
+
+  .skilltext {
+    h5 {
+      display: flex;
+      justify-content: center;
+      width:320px;
+      text-align:center;
+      font-size: .4em;
+      padding:9px 8px 0 8px;
+      margin:0 0 0 0;
+      font-family: sans-serif;
+
+      a:link {
+        color:#fafff3;
+      }
+      a:visited {
+        color:#fafff3;
+      }
+      a:hover {
+        color:#3affaf;
+      }
+    }
+
+    h6 {
+      font-size: .3em;
+      margin:0 5px 0 5px;
+      padding:4px;
+      border-bottom:1px solid #797979;
+      font-family: sans-serif;
+    }
+
+  }
+  .skillbox {
+    background-color:#8dd3e0;
+    color:#3f3f3f;
+    border:2px solid #1a936f;
+    margin: 0 0 7px 15px;
+    padding:0 0 0 0;
+    width:320px;
+    min-height:240px;
+  }
+
+  .monitor_wrap {
+    text-align:center;
+    margin: 0 auto;
+    padding-bottom:35px;
+
+    .monitor {
+      display:block;
+      color:#3f3f3f;
+      margin: 0;
+      padding:0 0 0 0;
+      width:362px;
+      height:290px;
+      top:0;
+      background-color:#01061c;
+      img {
+        position:relative;
+        padding:0;
+        margin:0;
+        vertical-align:top;
+        &.monbot {
+          top:-10px;
+        }
+      }
+    }
+  }
+}
+
+@mixin imgheader-mobile() {
+
+  div {
+    &.hed {
+      background-color: $midnight-green;
+      background: url('$lib/images/gohead.jpg') 40% 40% no-repeat;
+      background-size: cover;
+      padding:20px 0 9px 0;
+      border-top:1px solid $cadet-blue;
+      border-bottom:1px solid $cadet-blue;
+      font-size:.65em;
+
+      h1 {
+        line-height:1em;
+      }
+    }
+
+      &.subhed {
+        span {
+        line-height:1.4em;
+        margin: 4px 5px 0 0;
+        font-size:1.2em;
+      }
+
+    }
+
+    &.contentHorizon {
+      display:flex;
+      flex-direction: column;
+      background-color:#f3f3ff;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+
+
+      .flexHeader {
+        display: block;
+        text-align:center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+        font-size:.7em;
+      }
+    }
+    &.contentHorizon2 {
+      display:block;
+      background-color:$flexHeader2;
+      color:$flexHeader2Text;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        padding: 0 5px 0 5px;
+        margin: 0 auto;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+        font-size:.7em;
+
+        h4 {
+          font-size:0.4em;
+        }
+      }
+    }
+
+    &.contentHorizon3 {
+      display:block;
+      width:100%;
+      background-color:#ffebc6;
+      color:#292929;
+      font-size:2em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: block;
+        text-align:center;
+        justify-content: center;
+        margin: 0 auto;
+
+        .skillbox_clear {
+          display:block;
+          text-align:center;
+          color:#3f3f3f;
+          margin: 0 auto;
+          padding:0;
+          max-width:320px;
+          width:320px;
+          height:240px;
+        }
+        ul.skillpoints {
+          display:block;
+          text-align:center;
+          margin:0 auto;
+          padding: 0;
+
+          li {
+            font-family: sans-serif;
+            font-size:.4em;
+            margin:0 0 2em 0;
+            list-style: none;
+            background-color:#ffdca3;
+            padding:10px 10px 10px 20px;
+            border-radius:7px 7px 7px 7px;
+            text-align:left;
+            line-height:1.3em;
+          }
+        }
+      }
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+      }
+    }
+  }
+
+  .skilltext {
+    h5 {
+      display: flex;
+      justify-content: center;
+      width:320px;
+      text-align:center;
+      font-size: .4em;
+      padding:9px 8px 0 8px;
+      margin:0 0 0 0;
+      font-family: sans-serif;
+
+      a:link {
+        color:#fafff3;
+      }
+      a:visited {
+        color:#fafff3;
+      }
+      a:hover {
+        color:#3affaf;
+      }
+    }
+
+    h6 {
+      font-size: .3em;
+      margin:0 5px 0 5px;
+      padding:4px;
+      border-bottom:1px solid #797979;
+      font-family: sans-serif;
+    }
+
+  }
+  .skillbox {
+    background-color:#8dd3e0;
+    color:#3f3f3f;
+    border:2px solid #1a936f;
+    margin: 0 0 7px 15px;
+    padding:0 0 0 0;
+    width:320px;
+    min-height:240px;
+  }
+
+
+}
+
+@mixin imgheader-tiny() {
+
+
+  div {
+    &.hed {
+      min-height:450px;
+      background-color: $midnight-green;
+      background: url('$lib/images/gohead.jpg') 40% 40% no-repeat;
+      background-size: cover;
+      padding:9px 0 9px 0;
+      border-top:1px solid $cadet-blue;
+      border-bottom:1px solid $cadet-blue;
+      font-size:.55em;
+
+      h1 {
+        line-height:1em;
+        margin-bottom:7px;
+      }
+    }
+
+    &.subhed {
+      max-width:300px;
+      span {
+        line-height:1.4em;
+        margin: 0 4px 0 0;
+        font-size: 1.5em;
+      }
+    }
+
+    &.contentHorizon {
+      display:block;
+      width:100%;
+      background-color:#f3f3ff;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+        font-size:.7em;
+      }
+    }
+    &.contentHorizon2 {
+      display:block;
+      background-color:$flexHeader2;
+      color:$flexHeader2Text;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+
+      .flexHeader {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: center;
+      }
+      .skillHeader {
+        text-align:center;
+        padding-bottom:18px;
+        padding-top:18px;
+        font-size:.7em;
+
+        h4 {
+          font-size: 0.45em;
+          line-height:1.35em;
+        }
+      }
+    }
+
+    &.contentHorizon3 {
+      display:block;
+      width:100%;
+      background-color:#ffebc6;
+      color:#292929;
+      font-size:2.3em;
+      text-align:center;
+      margin:0 auto;
+      padding:17px 0 50px 0;
+
+      .flexHeader {
+        display: block;
+        text-align:center;
+        justify-content: center;
+        margin: 0 auto;
+
+        .skillbox_clear {
+          display:block;
+          text-align:center;
+          color:#3f3f3f;
+          margin: 0 auto;
+          padding:0;
+          max-width:320px;
+          width:320px;
+          height:240px;
+        }
+        ul.skillpoints {
+          display:block;
+          margin: 0 auto;
+          padding: 0 8px 0 8px;
+
+          li {
+            font-family: sans-serif;
+            font-size:.4em;
+            margin:0 0 2em 0;
+            list-style: none;
+            background-color:#ffdca3;
+            padding:10px 10px 10px 20px;
+            border-radius:7px 7px 7px 7px;
+            text-align:left;
+            line-height:1.3em;
+          }
+        }
+      }
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        font-size: 0.8em;
+        text-align:center;
+        padding-bottom:8px;
+        padding-top:18px;
+
+        h4 {
+          font-size: 0.45em;
+          line-height:1.35em;
+        }
+      }
+    }
+  }
+}

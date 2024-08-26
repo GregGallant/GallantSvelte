@@ -1,0 +1,440 @@
+// TODO: Fix damn pointer navs -grid 2 flex for safari support -  Preloader threejs - Go news dates-  Fixed headers - news admin - ms edge tests - fckn safari legacy support
+
+.headerSpace {
+  padding:7px 0 0 0;
+}
+
+#burgertime {
+  cursor:pointer;
+}
+
+.burger-button {
+  background: none;
+}
+
+header {
+  div {
+    &.gcontainer {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      grid-auto-rows: minmax(85px, auto);
+      width: 100%;
+      max-height: 85px;
+
+      div.gcol-left {
+        grid-column: 1;
+      }
+      div.gcol-right {
+        grid-column: 2 / 4;
+      }
+    }
+    &.gsubcontainer {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      grid-auto-rows: minmax(95px, auto);
+      width: 100%;
+      max-height: 95px;
+      background-color:#e9f2ff;
+
+      div.gcol-left {
+        grid-column: 1;
+      }
+      div.gcol-right {
+        grid-column: 2 / 4;
+      }
+    }
+    &.superhead {
+      height:76px;
+      padding: 0 0 0 12px;
+
+    }
+    &.logohead {
+      text-align: left;
+      padding:62px 0 2px 9px;
+    }
+
+    &.menuhead {
+      margin:0;
+      ul {
+        position:absolute;
+        top:40px;
+        display: inline;
+        float:right;
+        right:0;
+        margin:0;
+        li {
+          display: inline;
+          font-family:Helvetica,Arial,sans-serif;
+          font-size:0.8em;
+          text-decoration:none;
+          background-color:$cadet-blue;
+          text-align:center;
+          padding:5px 14px 5px 14px;
+          border-radius:3px;
+          border:2px solid $celadon-green;
+          color:#ffffff;
+          margin-left: auto;
+          margin-right: 7px;
+          cursor:pointer;
+
+          a {
+            text-decoration:none;
+            color:#ffffff;
+            cursor:pointer;
+
+            &:hover {
+              color: $lapis-lazuli;
+            }
+            &:visited {
+              color:#ffffff;
+            }
+          }
+        }
+        li:hover {
+          text-align:center;
+          border-radius:3px;
+          border:2px solid $celadon-green;
+          background-color:$lemon-meri;
+          cursor:pointer;
+          a {
+            color:#0f0f0f;
+          }
+        }
+      }
+    }
+    &.burgerhead {
+      position:relative;
+      margin:-40px 5px 0 0;
+      padding: 0 0 0 0;
+      float:right;
+      cursor:pointer;
+      ul#burgermenu {
+        display: none;
+        position:inherit;
+        margin:0 30px 0 0;
+        border:2px outset $cadet-blue;
+        background-color:$celadon-green;
+        background-image: linear-gradient(to bottom right, $tea-blue, $tea-blue2);
+        width:350px;
+        height:300px;
+        z-index:10;
+      }
+      button {
+        border: none;
+        padding: 0 0 0 0;
+        img {
+          width:50%;
+          float:right;
+        }
+      }
+    }
+
+    &.dropdown-menu {
+      background:none;
+      border: none;
+    }
+  }
+}
+
+// Tablets
+@mixin header-smtab() {
+
+  header {
+    div {
+      &.menuhead {
+        ul {
+          right:0;
+          margin:0;
+          li {
+            display: inline;
+            text-decoration:none;
+            margin-right:7px;
+            cursor:pointer;
+          }
+          li:hover {
+            cursor:pointer;
+          }
+        }
+      }
+      &.burgerhead {
+        display:none;
+      }
+    }
+  }
+}
+
+@mixin header-lgtab() {
+
+  header {
+    div {
+      &.menuhead {
+        ul {
+          right:0;
+          margin:0;
+          li {
+            display: inline;
+            text-decoration:none;
+            margin-right:7px;
+            cursor:pointer;
+          }
+          li:hover {
+            cursor:pointer;
+          }
+        }
+      }
+      &.burgerhead {
+        display:none;
+      }
+    }
+  }
+}
+
+
+// DESKTOP
+@mixin header-desktop() {
+  header {
+    div {
+      &.menuhead {
+        ul {
+          li {
+            cursor:pointer;
+          }
+          li:hover {
+            cursor:pointer;
+          }
+        }
+      }
+      &.burgerhead {
+        display:none;
+      }
+    }
+  }
+}
+
+
+// Mobile
+@mixin header-mobile() {
+
+  header{
+    div {
+      &.menuhead {
+        width:42%;
+        ul {
+          display: none;
+          height:70px;
+          width:auto;
+          padding:50px 0 0 0;
+          margin:0 5px 0 0;
+          float:right;
+          clear:both;
+          li {
+            display: inline;
+            font-family:Lora,Helvetica,Arial,sans-serif;
+            font-size:1.12em;
+            padding:0 40px 0 0;
+            text-decoration:none;
+            cursor:pointer;
+            a {
+              color: $dark-grey;
+              &:hover {
+                color: $lapis-lazuli;
+              }
+              &:visited {
+                color: $dark-grey;
+              }
+            }
+          }
+          li:hover {
+            cursor:pointer;
+          }
+        }
+      }
+
+      &.burgerhead {
+        text-align:right;
+        padding: 0 0 0 0;
+        margin: -30px 5px 0 0;
+
+        button {
+          img {
+            margin:-15px 0 0 0;
+          }
+        }
+
+        ul#burgermenu {
+          display: none;
+          position:absolute;
+          margin:0;
+          padding:0;
+          right:0;
+          border:1px outset $cadet-blue;
+          background-color:$tea-blue;
+          background-image: linear-gradient(to bottom right, $tea-blue, $tea-blue2);
+          width:140px;
+          height:auto;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 5px;
+          text-decoration:none;
+          a {
+            text-decoration:none;
+            cursor:pointer;
+          }
+
+          li {
+            display: block;
+            color: $dark-grey;
+            padding:12px 10px 12px 10px;
+            font-family:Helvetica,Arial,serif;
+            font-size:.9em;
+            border-bottom: 2px inset $cadet-blue;
+            text-decoration: none;
+            text-align:center;
+            cursor:pointer;
+            &:hover {
+              background-color:$celadon-green;
+              background-image: linear-gradient(to bottom right, $celadon-green, $cyan-azure);
+              cursor: pointer;
+              color:$lemon-meri;
+              a { color:$lemon-meri; }
+            }
+            a {
+              color: $dark-grey;
+              text-decoration: none;
+              &:hover {
+                color:$lemon-meri;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      &.dropdown-menu {
+        background:none;
+        border: none;
+      }
+    }
+  }
+
+}
+
+
+// Tiny Mobile
+
+@mixin header-tiny() {
+
+  header{
+    max-width:369px;
+    div {
+      &.superhead {
+        margin: 0 0 0 0;
+      }
+
+      &.logohead {
+        text-align:left;
+        img {
+          max-width:150px;
+        }
+      }
+
+
+      &.menuhead {
+        width:42%;
+        ul {
+          display: none;
+          height:70px;
+          width:auto;
+          padding:50px 0 0 0;
+          margin:0px 5px 0 0;
+          float:right;
+          clear:both;
+          li {
+            display: inline;
+            font-family:Lora,Helvetica,Arial,sans-serif;
+            font-size:1.12em;
+            padding:0 40px 0 0;
+            text-decoration:none;
+            cursor:pointer;
+            a {
+              color: $dark-grey;
+              &:hover {
+                color: $lapis-lazuli;
+              }
+              &:visited {
+                color: $dark-grey;
+              }
+            }
+          }
+        }
+      }
+
+
+      &.burgerhead {
+        text-align:right;
+        padding: 0 0 0 0;
+        margin: -30px 5px 0 0;
+        right: 0;
+        button {
+          img {
+            margin:-15px 0 0 0;
+          }
+        }
+        ul#burgermenu {
+          display: none;
+          position:absolute;
+          margin:0;
+          padding:0;
+          border:1px outset $cadet-blue;
+          background-color:$tea-blue;
+          background-image: linear-gradient(to bottom right, $tea-blue, $tea-blue2);
+          width:140px;
+          height:auto;
+          right: 0;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 5px;
+          text-decoration:none;
+          a {
+            text-decoration:none;
+            cursor:pointer;
+          }
+
+          li {
+            display: block;
+            color: $dark-grey;
+            padding:12px 10px 12px 10px;
+            font-family:Helvetica,Arial,serif;
+            font-size:.9em;
+            border-bottom: 2px inset $cadet-blue;
+            text-decoration: none;
+            text-align:center;
+            cursor:pointer;
+            &:hover {
+              background-color:$celadon-green;
+              background-image: linear-gradient(to bottom right, $celadon-green, $cyan-azure);
+              cursor: pointer;
+              color:$lemon-meri;
+              a { color:$lemon-meri; }
+            }
+
+            a {
+              color: $dark-grey;
+              text-decoration: none;
+              &:hover {
+                color:$lemon-meri;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      &.dropdown-menu {
+        background:none;
+        border: none;
+      }
+    }
+  }
+
+}

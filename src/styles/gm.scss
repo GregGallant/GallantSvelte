@@ -1,0 +1,296 @@
+$midnight-green: #00535d;
+$celadon-green: #052f5f;
+$oldceladon-green: #2d8691;
+$cadet-blue: #005377;
+$oldcadet-blue: #53939d;
+$lemon-meri: #f8efc3;
+$light-meri: #fcefd0;
+$off-meri: #ece9e0;
+$apricot: #ff5333;
+$light-peach: #ffecbf;
+$tea-blue: #d0efb5;
+$tea-blue3: #afd0ea;
+$tea-blue2: #bfe0fa;
+$lapis-lazuli: #2274a5;
+$queen-blue: #427aa1;
+$cyan-azure: #4f7cac;
+$dark-grey: #101010;
+$mid-grey: #192033;
+$lapis-grey: #444444;
+$wine: #5b2333;
+$another-color: #cdcdcd;
+$off-white: #efefef;
+$body-back: #eef3ff;
+$flexHeader2: #005377;
+$flexHeader2Text: #f2faf1;
+
+@import "validation";
+@import "typog";
+@import "header";
+@import "news";
+@import "inputs";
+@import "imgheader";
+@import "footer";
+@import "transitions";
+@import "music";
+
+body {
+    background-color:$body-back;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.content {
+    margin: 0 0 0 0;
+}
+
+.container-fluid {
+    padding: 0 0 0 0;
+    margin-right: auto;
+    margin-left: auto;
+    .row {
+        margin: 0 0 0 0;
+    }
+}
+
+.beta {
+    font-size:.6em;
+    margin-top:-15px;
+    color:$lapis-lazuli;
+}
+.beta2 {
+    display:block;
+    font-size: .7em;
+    margin-top:-5px;
+    color: $dark-grey;
+}
+
+div.blahdiv {
+    padding: 7px 0 7px 0;
+}
+
+.icon_left {
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #939393;
+    width: 85px;
+    height: 85px;
+}
+
+.subheader01 {
+    display: block;
+    font-family: Lowvetica, Helvetica, sans-serif;
+    font-size: 1.1em;
+    background-color: #258EA6;
+    color:#fff;
+    padding: 10px 10px 7px 15px;
+    margin: 0 0 10px 0;
+}
+
+.subheader02 {
+    font-family: Lowvetica, Helvetica, Arial, sans-serif;
+    font-size: 2.3em;
+    color: #E4DACF;
+    font-weight: 100;
+    letter-spacing:.1em;
+    margin: 24px 10px 24px 5px;
+    padding: 14px 0 0 0;
+}
+
+.icon_vert {
+    display: inline-block;
+    border-bottom:1px solid #939393;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    text-align: left;
+    margin-bottom:40px;
+    p {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size:1.0em;
+        color:#ffffff;
+        line-height: 2.1em;
+    }
+    img {
+        margin:0 15px 15px 0;
+    }
+}
+
+.icon_vert_2 {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    text-align: left;
+    margin-bottom: 40px;
+
+    p {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.0em;
+        color:#ffffff;
+        line-height: 2.1em;
+    }
+
+    img {
+        margin: 0 15px 15px 0;
+    }
+}
+
+#godetails {
+    position:relative;
+    display:block;
+}
+
+#goheader {
+    display:block;
+}
+
+.text_vert {
+    display: block;
+    float: left;
+    font-size: .9em;
+    font-family: Helvetica, Arial,sans-serif;
+}
+
+
+.whatsnew {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:.9em;
+    color: #011936;
+    margin-bottom:15px;
+
+    div.newstuff {
+        display: inline-block;
+        margin: 5px 0 10px 0;
+
+        span.hed {
+            display: inline-block;
+            font-weight:500;
+            font-size:1.4em;
+        }
+
+        img {
+            display: inline-block;
+        }
+
+        em {
+            display:block;
+            text-align:right;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+
+        div.stuffstuff {
+            display: block;
+            margin: 5px 0 0 0;
+            font-size:1.1em;
+        }
+    }
+}
+
+.whatsnewimage {
+    display: inline-block;
+    font-size: .9em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    -moz-box-shadow: 3px 3px 4px #333;
+    -webkit-box-shadow: 3px 3px 4px #333;
+    box-shadow: 3px 3px 4px #333;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+    border: 1px solid #258EA6;
+    margin: 0 14px 14px 0;
+}
+
+.ficons {
+    font-size: 60px;
+    margin: 0 0 10px 0;
+    padding:10px 0 14px 0;
+}
+
+.about {
+    background-image: radial-gradient(
+                    50% 50% at 50% 50%,
+                    rgba(235, 235, 255, 0.75) 20%,
+                    rgba(242, 249, 255, 0) 100%
+    ),
+    linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+
+    margin:0 0 20px 0;
+
+    .about-column {
+        display: flex;
+        max-width: 48rem;
+        flex: 0.6;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        padding:0 20px 0 20px;
+
+        h2 {
+            padding-top:30px;
+        }
+
+        h5 {
+            a {
+                color: $cadet_blue;
+            }
+        }
+    }
+}
+
+
+
+// MEDIA QUERIES //
+@media screen and (max-width: 3000px) and (min-width:1301px)
+{
+    @include header-desktop();
+    @include imgheader-desktop();
+    @include inputs-desktop();
+    @include typog-desktop();
+    @include footer-desktop();
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+
+    @include imgheader-lgtab();
+    @include inputs-lgtab();
+    @include header-lgtab();
+    @include news-lgtab();
+}
+
+@media screen and (min-width:501px) and (max-width: 900px)
+{
+    @include inputs-tablet();
+    @include header-smtab();
+    @include validation-mdtab();
+    @include typog-tablet();
+    @include news-mdtab();
+    @include imgheader-tablet();
+}
+
+@media screen and (min-width: 371px) and (max-width: 500px)  {
+
+    @include inputs-mobile();
+    @include typog-mobile();
+    @include validation-smtab();
+    @include header-mobile();
+    @include news-mobile();
+    @include imgheader-mobile();
+    @include footer-mobile();
+}
+
+@media screen and (max-width: 370px) {
+
+    @include typog-tiny();
+    @include inputs-tiny();
+    @include validation-mobile();
+    @include header-tiny();
+    @include news-tiny();
+    @include imgheader-tiny();
+    @include footer-tiny();
+}
+
