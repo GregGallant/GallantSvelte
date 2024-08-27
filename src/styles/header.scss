@@ -1,7 +1,7 @@
 // TODO: Fix damn pointer navs -grid 2 flex for safari support -  Preloader threejs - Go news dates-  Fixed headers - news admin - ms edge tests - fckn safari legacy support
 
 .headerSpace {
-  padding:7px 0 0 0;
+  padding:0 0 0 0;
 }
 
 #burgertime {
@@ -12,42 +12,55 @@
   background: none;
 }
 
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  margin: 95px auto;
+  box-sizing: border-box;
+}
+
+
+
 header {
+  position:fixed;
+  width:100%;
+  background-color:#e9f2ff;
+  z-index:11;
+
   div {
     &.gcontainer {
-      grid-template-columns: repeat(3, 1fr);
+      display:flex;
+      flex-direction: row;
       gap: 0;
-      grid-auto-rows: minmax(85px, auto);
       width: 100%;
-      max-height: 85px;
+      max-height: 95px;
 
       div.gcol-left {
-        grid-column: 1;
+        text-align:left;
       }
       div.gcol-right {
-        grid-column: 2 / 4;
+        text-align:right;
       }
     }
     &.gsubcontainer {
-      grid-template-columns: repeat(3, 1fr);
+      display:flex;
+      flex-direction: row;
       gap: 0;
-      grid-auto-rows: minmax(95px, auto);
       width: 100%;
       max-height: 95px;
-      background-color:#e9f2ff;
 
       div.gcol-left {
-        grid-column: 1;
+        text-align:left;
       }
       div.gcol-right {
-        grid-column: 2 / 4;
+        text-align:right;
       }
     }
-    &.superhead {
-      height:76px;
-      padding: 0 0 0 12px;
 
-    }
     &.logohead {
       text-align: left;
       padding:62px 0 2px 9px;
@@ -104,9 +117,7 @@ header {
     }
     &.burgerhead {
       position:relative;
-      margin:-40px 5px 0 0;
       padding: 0 0 0 0;
-      float:right;
       cursor:pointer;
       ul#burgermenu {
         display: none;
@@ -121,10 +132,9 @@ header {
       }
       button {
         border: none;
-        padding: 0 0 0 0;
+        padding: 84px 0 0 0;
         img {
-          width:50%;
-          float:right;
+          max-width:70px;
         }
       }
     }
@@ -257,7 +267,7 @@ header {
 
         button {
           img {
-            margin:-15px 0 0 0;
+            margin:-10px 0 0 0;
           }
         }
 
@@ -327,10 +337,6 @@ header {
   header{
     max-width:369px;
     div {
-      &.superhead {
-        margin: 0 0 0 0;
-      }
-
       &.logohead {
         text-align:left;
         img {
