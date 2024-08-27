@@ -19,7 +19,7 @@ main {
   flex-direction: column;
   padding: 0;
   width: 100%;
-  margin: 95px auto;
+  margin: 92px auto 0 auto;
   box-sizing: border-box;
 }
 
@@ -30,6 +30,7 @@ header {
   width:100%;
   background-color:#e9f2ff;
   z-index:11;
+  border-bottom: 1px solid #949494;
 
   div {
     &.gcontainer {

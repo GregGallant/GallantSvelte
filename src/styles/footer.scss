@@ -23,7 +23,6 @@ div {
     background-color: $footerBackground;
     border-top:1px solid $lapis-lazuli;
     padding:0 0 40px 0;
-    margin-top: 25px;
 
     .foot-generic {
       padding: 5px 0 0 0;
@@ -34,15 +33,17 @@ div {
     }
 
     div {
-
-      ul.mini_footy {
+      ul.footer_links {
+        padding:0 0 0 25px;
         li {
           display:block;
           float:left;
           clear:both;
+          font-family:Tenor_Sans, serif;
           text-decoration:none;
-          font-size:10pt;
-          padding-bottom:4px;
+          font-size:1em;
+          padding:4px 0 4px 0;
+          line-height:1.2em;
           color:$lemon-meri;
           a {
             color:$lemon-meri;
@@ -52,10 +53,8 @@ div {
     }
 
     .foot_place_1 {
-      padding:2px 10px 10px 25px;
+      padding:2px 10px 10px 22px;
       text-align:left;
-
-
     }
 
     .foot_addr {
@@ -91,6 +90,10 @@ div {
 
 @mixin footer-desktop() {
   div {
+    ul.footer_links {
+      padding: 0 0 0 25px;
+      font-size:1em;
+    }
     &.footer {
       min-height:$footerMinHeight;
       padding-bottom:10px;
@@ -100,16 +103,39 @@ div {
   }
 }
 
+@mixin footer-tablet() {
+  div {
+    ul.footer_links {
+      padding: 0 0 0 25px;
+      font-size:.9em;
+    }
+    &.footer {
+      .foot_place_1 {
+        padding:2px 10px 10px 0;
+        text-align:left;
+      }
+    }
+  }
+}
+
 @mixin footer-mobile() {
   div {
+    ul.footer_links {
+      padding: 0 0 0 25px;
+      font-size:.7em;
+    }
     &.footer {
       min-height:$footerMinHeightMobile;
       background-color: $footerBackground;
       margin-top:0;
       margin-bottom:0;
       padding-bottom:40px;
-      .foot_addr div {
-        font-size:.8em;
+      .foot_addr {
+        font-size:.75em;
+      }
+      .foot_place_1 {
+        padding:2px 10px 10px 0;
+        text-align:left;
       }
     }
   }
@@ -117,15 +143,24 @@ div {
 
 @mixin footer-tiny() {
   div {
+    ul.footer_links {
+      padding: 0 0 0 25px;
+      font-size:.7em;
+    }
     &.footer {
       min-height:$footerMinHeightMobile;
       background-color: $footerBackground;
       margin-top:0;
       margin-bottom:0;
       padding-bottom:40px;
-      .foot_addr div {
-        font-size:.8em;
+      .foot_addr {
+        font-size:.75em;
+      }
+      .foot_place_1 {
+        padding:2px 10px 10px 0;
+        text-align:left;
       }
     }
+
   }
 }

@@ -270,6 +270,7 @@ div.blahdiv {
     @include typog-tablet();
     @include news-mdtab();
     @include imgheader-tablet();
+    @include footer-tablet();
 }
 
 @media screen and (min-width: 371px) and (max-width: 500px)  {
