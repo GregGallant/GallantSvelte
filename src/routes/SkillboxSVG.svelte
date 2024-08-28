@@ -22,7 +22,10 @@
         let perspective = window.innerWidth / window.innerHeight;
         if (window.innerWidth < 750) {
             perspective = 1.103;
+        } else if(window.innerWidth > 1600) {
+            perspective = 1.5;
         }
+
         const camera = new THREE.PerspectiveCamera( 75, perspective, 0.1, 1000 );
 
 		//const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );

@@ -22,6 +22,8 @@
         let perspective = window.innerWidth / window.innerHeight;
         if (window.innerWidth < 860) {
             perspective = 1.103;
+        } else if(window.innerWidth > 1600) {
+            perspective = 1.5;
         }
 
         const camera = new THREE.PerspectiveCamera( 75, perspective, 0.1, 1000 );
@@ -110,7 +112,7 @@
 
         // Properties
         if (spec_mesh === "" || typeof(spec_mesh) === 'undefined') {
-            murl = '/models/vehicle1/scene.gltf';
+            murl = '/models/vehicle1/spaceship.gltf';
         } else {
             murl = '/models/'+spec_mesh+'/scene.gltf';
         }
@@ -262,7 +264,6 @@
                         }
 
                         // Z-index and y-rotation
-                        //console.log(model1.rotation.y);
                         if (model1.rotation.y < -3.05) {
                             model1.position.z -= .0025;
                             model1.rotation.y += (speed - .05);
@@ -270,24 +271,25 @@
                             model1.position.z += .0015;
                             model1.rotation.y -= (speed - .05);
                         }
-                    // Render
-
+                        // Render
                         //console.log("x: " + pointer.x);
                         //console.log("mx: " + model1.position.x);
-                    // console.log("y: " + pointer.y);
-                    //console.log("my: " + model1.position.y);
+                        // console.log("y: " + pointer.y);
+                        //console.log("my: " + model1.position.y);
                    }
 
                     renderer.render( scene, camera );
 
 			    });
 
-		},
+		    },
+            function (xhr) {
+                console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+            },
 			undefined, function (error) {
 				console.log(error);
 		});
 		camera.position.z = 5;
-
 
 		function animateCube() {
 			cube.rotation.x += 0.01;

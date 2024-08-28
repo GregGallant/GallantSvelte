@@ -19,14 +19,16 @@
 
 		const scene = new THREE.Scene();
 
-        console.log('3d resizer');
-        console.log(window.innerWidth);
-        console.log(window.innerWidth / window.innerHeight);
+        // Perspective Logging
+        //console.log(window.innerWidth);
+        //console.log(window.innerWidth / window.innerHeight);
 
         let perspective = window.innerWidth / window.innerHeight;
 
         if (window.innerWidth < 860) {
             perspective = 1.103;
+        } else if(window.innerWidth > 1600) {
+            perspective = 1.5;
         }
 
         const camera = new THREE.PerspectiveCamera( 75, perspective, 0.1, 1000 );
