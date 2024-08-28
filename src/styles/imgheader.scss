@@ -265,11 +265,12 @@ div {
 
 
 
-  .monitor_wrap {
+.monitor_wrap {
     text-align:center;
     margin: 0 9px 0 auto;
 
-    .monitor {
+  .monitor {
+    position:relative;
       display:block;
       color:#3f3f3f;
       margin: 0;
@@ -287,8 +288,19 @@ div {
           top:-10px;
         }
       }
-    }
   }
+}
+
+#progressBar {
+  position:absolute;
+  width:300px;
+  height:20px;
+  z-index:9;
+  top:80%;
+  left:9%;
+  /*margin-left:-250px;*/
+}
+
 
 // RESPONSIVE
 

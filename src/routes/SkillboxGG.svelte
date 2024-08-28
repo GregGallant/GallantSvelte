@@ -28,8 +28,6 @@
 
         const camera = new THREE.PerspectiveCamera( 75, perspective, 0.1, 1000 );
 
-		//const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
 		const renderer = new THREE.WebGLRenderer({ antialias: true, canvas:aCube });
 		renderer.setSize( 320, 240 );
         renderer.setAnimationLoop(); // wrap in timer or counter or something for memory
@@ -38,6 +36,8 @@
 		const geometry = new THREE.BoxGeometry( 2, 2, 2 );
 		const material = new THREE.MeshBasicMaterial( { color: 0x00ff90, wireframe: true } );
 		const cube = new THREE.Mesh( geometry, material );
+
+        const progressBar = document.getElementById('progressBar');
 
         // Pointer and event
         let pointer = {
@@ -112,7 +112,7 @@
 
         // Properties
         if (spec_mesh === "" || typeof(spec_mesh) === 'undefined') {
-            murl = '/models/vehicle1/spaceship.gltf';
+            murl = '/models/spaceshipTests/spaceship.gltf';
         } else {
             murl = '/models/'+spec_mesh+'/scene.gltf';
         }
@@ -133,6 +133,8 @@
 		await loader.load(url, function(glb) {
 
 			const model1 = glb.scene;
+
+            progressBar.style.display = 'none';
 			//const model2 = new THREE.Mesh(model1, material);
 			scene.add(model1);
 
@@ -284,7 +286,9 @@
 
 		    },
             function (xhr) {
-                console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+                //console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+                const percentComplete = (xhr.loaded / xhr.total) * 100;
+                progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
             },
 			undefined, function (error) {
 				console.log(error);

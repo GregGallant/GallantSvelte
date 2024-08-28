@@ -81,6 +81,7 @@
 						<div class="frontend">SvelteJS&nbsp;&nbsp;&nbsp;ThreeJS&nbsp;&nbsp;&nbsp;Javascript &nbsp;&nbsp;&nbsp; SCSS</div>
 						<h4>Responsive and reactive programming, Unity development, and Adobe Photoshop and Premier design for web and apps </h4>
 						<h6>SvelteJS + ThreeJS allows for custom mini-games & interactive components simplified into HTML tags</h6>
+
 					</div>
 					<div class="monitor_wrap">
 						<div class="monitor">
@@ -89,6 +90,7 @@
 								<img src={svelteimg} alt="GoLang, Java, C#" width="320px" height="240px"/>
 							{:else}
 								<SkillboxGG mesh="spaceship" size="0.5" rotation="normal" />
+								<progress value="0" max="100" id="progressBar"></progress>
 							{/if}
 							<img class="monbot" src={monbot} alt="monitor bottom"/>
 						</div>
