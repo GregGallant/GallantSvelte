@@ -305,7 +305,7 @@
 
 		    },
             function (xhr) {
-                console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+                //console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
            //     const percentComplete = (xhr.loaded / xhr.total) * 100;
             //    progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
             },

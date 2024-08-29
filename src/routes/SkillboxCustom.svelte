@@ -144,7 +144,6 @@
             } else {
                 rspeed = rspeed + .0005;
             }
-            console.log(rspeed);
         });
 
         aCube.addEventListener('mousemove', (event) => {
@@ -160,7 +159,6 @@
                             rspeed = rspeed + .0001;
                         }
 
-                        console.log(rspeed);
                         torus.rotation.y += rspeed;
                         renderer.render(scene, camera);
                     });
@@ -184,10 +182,9 @@
 
         renderer.render(scene, camera);
 
-
     },
         function (xhr) {
-            console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+      //      console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
             //     const percentComplete = (xhr.loaded / xhr.total) * 100;
             //    progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
         },
