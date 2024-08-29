@@ -71,8 +71,10 @@
             hheight = aCube.height / 2;
             pointer.x = -1;
             pointer.y = -1;
+            if (memoryReady === false) {
+                renderer.dispose();
+            }
             memoryReady = false;
-            console.log('memoryReady off');
         });
 
         aCube.addEventListener('mousemove', (event) => {
@@ -117,7 +119,6 @@
             //pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
             //pointer.y = (event.clientY / window.innerHeight) * 2 + 1;
 
-            console.log('memoryReady on');
 
             if (memoryReady === true && meshLoaded === true) {
 

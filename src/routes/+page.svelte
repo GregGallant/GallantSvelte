@@ -50,12 +50,7 @@
 							<h6>Front-end / Backend Languages</h6>
 							<h5>Go &nbsp;&nbsp;&nbsp; Java &nbsp;&nbsp;&nbsp; PHP &nbsp;&nbsp;&nbsp; C#</h5>
 						</div>
-						<!-- <Skillbox mesh="vehicle1/scene" size="0.7" rotation="normal" /> -->
-						{#if legacyBrowser === true}
-							<img src={gojavaimg} alt="GoLang, Java, PHP, C#" width="320px" height="240px"/>
-						{:else}
-						<SkillboxSVG svg="golang" size="1" rotation="normal" speed=".05"/>
-						{/if}
+						<img src={gojavaimg} alt="GoLang, Java, PHP, C#" width="320px" height="240px"/>
 					</div>
 					<div class="skillbox">
 						<div class="skilltext">
