@@ -79,20 +79,6 @@
             memoryReady = false;
         });
 
-        aCube.addEventListener('touchend', (event) => {
-            goanim = false;
-            fwidth = aCube.width;
-            fheight = aCube.height;
-            hwidth = aCube.width / 2;
-            hheight = aCube.height / 2;
-            pointer.x = -1;
-            pointer.y = -1;
-            if (memoryReady === false) {
-                renderer.dispose();
-            }
-            memoryReady = false;
-        });
-
         aCube.addEventListener('mousemove', (event) => {
             memoryReady = true;
             goanim = true;

@@ -127,16 +127,18 @@
 
         let aniFrame;
         let rspeed = .004;
+        let sphereTimeout;
+        let tsphereTimeout
 
         aCube.addEventListener('mouseout', (event) => {
             memoryReady = false;
-            const sphereTimeout = setTimeout( () => {
+            sphereTimeout = setTimeout( () => {
                 renderer.dispose();
                 if (typeof (sphereTimeout) != 'undefined') {
                     clearTimeout(sphereTimeout);
                     rspeed = .004;
                 }
-            }, 7000);
+            }, 14000);
 
             if (rspeed > 0) {
                 rspeed = rspeed - .0005;
@@ -147,23 +149,26 @@
 
             aCube.addEventListener('touchend', (event) => {
                 memoryReady = false;
-                const sphereTimeout = setTimeout( () => {
+                tsphereTimeout = setTimeout( () => {
                     renderer.dispose();
-                    if (typeof (sphereTimeout) != 'undefined') {
-                        clearTimeout(sphereTimeout);
+                    if (typeof (tsphereTimeout) != 'undefined') {
+                        clearTimeout(tsphereTimeout);
                         rspeed = .004;
                     }
-                }, 7000);
+                }, 14000);
 
                 if (rspeed > 0) {
-                    rspeed = rspeed - .0005;
+                    rspeed = rspeed - .0001;
                 } else {
-                    rspeed = rspeed + .0005;
+                    rspeed = rspeed + .0001;
                 }
             });
 
         aCube.addEventListener('mousemove', (event) => {
 
+            if (rspeed === 0) {
+                rspeed = .004;
+            }
             memoryReady = true;
 
                 if (memoryReady === true && meshLoaded === true) {
@@ -183,6 +188,9 @@
 
             aCube.addEventListener('touchmove', (event) => {
 
+                if (rspeed === 0) {
+                    rspeed = .004;
+                }
                 memoryReady = true;
 
                 if (memoryReady === true && meshLoaded === true) {
@@ -200,18 +208,27 @@
                 }
             });
 
-
+            let cheapoUntilMotionCode = 0;
             aCube.addEventListener('click', (event) => {
                 memoryReady = true;
 
                 if (rspeed === .004) {
                     rspeed = .04;
                 } else if (rspeed === .04) {
+                    cheapoUntilMotionCode = 1;
                     rspeed = -.01;
-                } else if (rspeed === -.01) {
-                    rspeed = .004;
+                } else if (rspeed <= .04 && rspeed > -.01) {
+                    cheapoUntilMotionCode = 0;
+                    rspeed = .09;
+                } else if (rspeed <= .09 && rspeed > .04) {
+                    cheapoUntilMotionCode = 1;
+                    rspeed = -.014;
                 } else {
-                    rspeed = -.04;
+                    if (cheapoUntilMotionCode === 0) {
+                        rspeed = -.04;
+                    } else {
+                        rspeed = .04;
+                    }
                 }
 
             });
