@@ -84,7 +84,6 @@
 
         const torus = new THREE.Mesh(wfGeometry, material);
 
-
         // Properties
 
         if (spec_size === "" || typeof (spec_size) === 'undefined') {
@@ -94,7 +93,6 @@
         if (spec_speed === "" || typeof (spec_speed) === 'undefined') {
             spec_speed = 0.05;
         }
-
 
         let r_x = .08;
         let r_y = 0.8;
@@ -136,6 +134,7 @@
                 renderer.dispose();
                 if (typeof (sphereTimeout) != 'undefined') {
                     clearTimeout(sphereTimeout);
+                    rspeed = .004;
                 }
             }, 5000);
 
@@ -145,6 +144,23 @@
                 rspeed = rspeed + .0005;
             }
         });
+
+            aCube.addEventListener('touchend', (event) => {
+                memoryReady = false;
+                const sphereTimeout = setTimeout( () => {
+                    renderer.dispose();
+                    if (typeof (sphereTimeout) != 'undefined') {
+                        clearTimeout(sphereTimeout);
+                        rspeed = .004;
+                    }
+                }, 5000);
+
+                if (rspeed > 0) {
+                    rspeed = rspeed - .0005;
+                } else {
+                    rspeed = rspeed + .0005;
+                }
+            });
 
         aCube.addEventListener('mousemove', (event) => {
 
@@ -164,6 +180,26 @@
                     });
                 }
         });
+
+            aCube.addEventListener('touchmove', (event) => {
+
+                memoryReady = true;
+
+                if (memoryReady === true && meshLoaded === true) {
+                    aniFrame = renderer.setAnimationLoop(() => {
+                        torus.rotation.x += 0.00;
+                        if (rspeed > .004) {
+                            rspeed = rspeed - .0001;
+                        } else if (rspeed >= -.04 && rspeed < 0) {
+                            rspeed = rspeed + .0001;
+                        }
+
+                        torus.rotation.y += rspeed;
+                        renderer.render(scene, camera);
+                    });
+                }
+            });
+
 
             aCube.addEventListener('click', (event) => {
                 memoryReady = true;
