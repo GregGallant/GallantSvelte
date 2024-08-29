@@ -132,8 +132,19 @@
 
         aCube.addEventListener('mouseout', (event) => {
             memoryReady = false;
-            renderer.dispose();
-            rspeed = .004;
+            const sphereTimeout = setTimeout( () => {
+                renderer.dispose();
+                if (typeof (sphereTimeout) != 'undefined') {
+                    clearTimeout(sphereTimeout);
+                }
+            }, 5000);
+
+            if (rspeed > 0) {
+                rspeed = rspeed - .0005;
+            } else {
+                rspeed = rspeed + .0005;
+            }
+            console.log(rspeed);
         });
 
         aCube.addEventListener('mousemove', (event) => {
@@ -144,8 +155,12 @@
                     aniFrame = renderer.setAnimationLoop(() => {
                         torus.rotation.x += 0.00;
                         if (rspeed > .004) {
-                            rspeed = rspeed - .001;
+                            rspeed = rspeed - .0001;
+                        } else if (rspeed >= -.04 && rspeed < 0) {
+                            rspeed = rspeed + .0001;
                         }
+
+                        console.log(rspeed);
                         torus.rotation.y += rspeed;
                         renderer.render(scene, camera);
                     });
@@ -155,11 +170,16 @@
             aCube.addEventListener('click', (event) => {
                 memoryReady = true;
 
-                if (rspeed === .04) {
+                if (rspeed === .004) {
                     rspeed = .04;
+                } else if (rspeed === .04) {
+                    rspeed = -.01;
+                } else if (rspeed === -.01) {
+                    rspeed = .004;
                 } else {
                     rspeed = -.04;
                 }
+
             });
 
         renderer.render(scene, camera);
