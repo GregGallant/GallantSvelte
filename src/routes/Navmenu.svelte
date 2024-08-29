@@ -52,7 +52,7 @@
                 <a href="/">Home</a>
             </li>
             <li on:click={()=>location.href='/news' } aria-current={$page.url.pathname.match('\/news(\/)?(\d?)*') ? 'page' : undefined}>
-                <a href="/news" data-sveltekit-preload-data="hover">Creative Links</a>
+                <a href="/news">Creative Links</a>
             </li>
             <li on:click={()=>location.href='/about'} aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
                 <a href="/about">About</a>

@@ -39,6 +39,19 @@
 
         const progressBar = document.getElementById('progressBar');
 
+        let model1;
+        let planeMesh;
+        let memoryReady = false;
+        let meshLoaded = false;
+
+        let inWinLX;
+        let inWinRX;
+        let inWinTY;
+        let inWinBY;
+        let inX = true;
+        let inY = true;
+        let speed = .07;
+
         // Pointer and event
         let pointer = {
             x: -1,
@@ -58,9 +71,12 @@
             hheight = aCube.height / 2;
             pointer.x = -1;
             pointer.y = -1;
+            memoryReady = false;
+            console.log('memoryReady off');
         });
 
         aCube.addEventListener('mousemove', (event) => {
+            memoryReady = true;
             goanim = true;
             /*
             console.log(aCube.width);
@@ -101,88 +117,11 @@
             //pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
             //pointer.y = (event.clientY / window.innerHeight) * 2 + 1;
 
-        });
+            console.log('memoryReady on');
 
+            if (memoryReady === true && meshLoaded === true) {
 
-        let murl;
-        let spec_mesh = {mesh}.mesh;
-        let spec_size = {size}.size;
-        let spec_rotation = {rotation}.rotation;
-        //console.log({mesh}.mesh);
-
-        // Properties
-        if (spec_mesh === "" || typeof(spec_mesh) === 'undefined') {
-            murl = '/models/spaceshipTests/spaceship.gltf';
-        } else {
-            murl = '/models/'+spec_mesh+'/scene.gltf';
-        }
-
-        if (spec_size === "" || typeof(spec_size) === 'undefined') {
-            spec_size = 0.7;
-        }
-
-        let r_x = 0.5;
-        let r_y = 0.2;
-        let r_z = 0.0;
-        let p_x = -0.8;
-        let p_y = 0;
-        let p_z = 0;
-
-        // LOADING
-        const url = murl;
-		await loader.load(url, function(glb) {
-
-			const model1 = glb.scene;
-
-            progressBar.style.display = 'none';
-			//const model2 = new THREE.Mesh(model1, material);
-			scene.add(model1);
-
-			//const model1 = new THREE.Mesh(modela, material);
-			//model1.MeshBasicMaterial( {wireframe: true });
-            //model1.scale.set(1.5, 1.5, 1.5); // rplayer
-		    //model1.scale.set(0.7, 0.7, 0.7); // car
-
-            model1.scale.set(spec_size, spec_size, spec_size); // car
-
-            model1.rotation.set(r_x, r_y, r_z);
-
-            model1.position.set(p_x, p_y, p_z);
-
-            // Lighting
-            const ambientLight = new THREE.AmbientLight(0xffffff);
-            scene.add(ambientLight);
-
-            const directionalLight = new THREE.DirectionalLight(0xffffff);
-            directionalLight.position.set(10, 10, 20).normalize();
-            scene.add(directionalLight);
-
-            const pointLight = new THREE.PointLight(0xffffff, 5, 1);
-            pointLight.position.set(10, 10, 20); // Set the position of the light
-            scene.add(pointLight);
-
-            //model1.position.x = -0.8;
-            // model1.position.y = 0.0;
-
-            let inWinLX;
-            let inWinRX;
-            let inWinTY;
-            let inWinBY;
-            let inX = true;
-            let inY = true;
-            let speed = .07;
-
-            const plane = new THREE.PlaneGeometry(30, 50, 25, 25);
-            const plane_material = new THREE.MeshBasicMaterial( { color: 0x00ffcf, wireframe: true } );
-            const planeMesh = new THREE.Mesh(plane, plane_material);
-
-            planeMesh.position.x = 0;
-            planeMesh.position.y = 0;
-            planeMesh.position.z = -5;
-            //planeMesh.position.z = 0;
-            planeMesh.rotation.x = -20;
-
-			    renderer.setAnimationLoop( () => {
+                renderer.setAnimationLoop( () => {
 
                     // out of bounds reset
                     if (goanim === false && pointer.x === -1 && pointer.y === -1) {
@@ -216,6 +155,7 @@
                             model1.rotation.y += .015;
                         } else {
                             model1.rotation.y = 0;
+                            memoryReady = false;
                         }
 
                         scene.remove(planeMesh);
@@ -278,17 +218,95 @@
                         //console.log("mx: " + model1.position.x);
                         // console.log("y: " + pointer.y);
                         //console.log("my: " + model1.position.y);
-                   }
+                    }
 
                     renderer.render( scene, camera );
 
-			    });
+                });
+            }
+        });
+
+
+        let murl;
+        let spec_mesh = {mesh}.mesh;
+        let spec_size = {size}.size;
+        let spec_rotation = {rotation}.rotation;
+        //console.log({mesh}.mesh);
+
+        // Properties
+        if (spec_mesh === "" || typeof(spec_mesh) === 'undefined') {
+            murl = '/models/spaceshipTests/spaceship.gltf';
+        } else {
+            murl = '/models/'+spec_mesh+'/scene.gltf';
+        }
+
+        if (spec_size === "" || typeof(spec_size) === 'undefined') {
+            spec_size = 0.7;
+        }
+
+        let r_x = 0.5;
+        let r_y = 0.0;
+        let r_z = 0.0;
+        let p_x = 0;
+        let p_y = 0;
+        let p_z = 0;
+
+        // LOADING
+        const url = murl;
+		await loader.load(url, function(glb) {
+
+			model1 = glb.scene;
+
+            meshLoaded = true;
+
+            //progressBar.style.display = 'none';
+			//const model2 = new THREE.Mesh(model1, material);
+			scene.add(model1);
+
+			//const model1 = new THREE.Mesh(modela, material);
+			//model1.MeshBasicMaterial( {wireframe: true });
+            //model1.scale.set(1.5, 1.5, 1.5); // rplayer
+		    //model1.scale.set(0.7, 0.7, 0.7); // car
+
+            model1.scale.set(spec_size, spec_size, spec_size); // car
+
+            model1.rotation.set(r_x, r_y, r_z);
+
+            model1.position.set(p_x, p_y, p_z);
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff);
+            scene.add(ambientLight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff);
+            directionalLight.position.set(10, 10, 20).normalize();
+            scene.add(directionalLight);
+
+            const pointLight = new THREE.PointLight(0xffffff, 5, 1);
+            pointLight.position.set(10, 10, 20); // Set the position of the light
+            scene.add(pointLight);
+
+            //model1.position.x = -0.8;
+            // model1.position.y = 0.0;
+
+
+            const plane = new THREE.PlaneGeometry(30, 50, 25, 25);
+            const plane_material = new THREE.MeshBasicMaterial( { color: 0x00ffcf, wireframe: true } );
+            planeMesh = new THREE.Mesh(plane, plane_material);
+
+            planeMesh.position.x = 0;
+            planeMesh.position.y = 0;
+            planeMesh.position.z = -5;
+            //planeMesh.position.z = 0;
+            planeMesh.rotation.x = -20;
+
+            renderer.render( scene, camera );
 
 		    },
             function (xhr) {
-                //console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
-                const percentComplete = (xhr.loaded / xhr.total) * 100;
-                progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
+                console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+           //     const percentComplete = (xhr.loaded / xhr.total) * 100;
+            //    progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
             },
 			undefined, function (error) {
 				console.log(error);

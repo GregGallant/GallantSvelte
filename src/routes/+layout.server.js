@@ -4,7 +4,6 @@ export const load = ({cookies}) => {
 
     const token = cookies.get('token');
     const userz = { name: 'TestUser', id: 444}
-
     return {user: token ? userz : null};
 };
 

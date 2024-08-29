@@ -16,12 +16,16 @@ $: threads = data.threads['posts'];
 	<div class="datehead">Creative Links
 		<div class="subdatehead">Entertainment tech news</div>
 	</div>
-	{#if threads && threads.length > 0}
-		<ul>
-			{#each threads as nnews}
-				<NewsArt newsObj={nnews} />
-			{/each}
-		</ul>
-	{/if}
+	{#await threads}
+		Loading...
+	{:then threads}
+		{#if threads && threads.length > 0}
+			<ul>
+				{#each threads as nnews}
+					<NewsArt newsObj={nnews} />
+				{/each}
+			</ul>
+		{/if}
+	{/await}
 </div>
 <!-- @html nnews.text -->
