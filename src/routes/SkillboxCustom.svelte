@@ -136,7 +136,7 @@
                     clearTimeout(sphereTimeout);
                     rspeed = .004;
                 }
-            }, 5000);
+            }, 7000);
 
             if (rspeed > 0) {
                 rspeed = rspeed - .0005;
@@ -153,7 +153,7 @@
                         clearTimeout(sphereTimeout);
                         rspeed = .004;
                     }
-                }, 5000);
+                }, 7000);
 
                 if (rspeed > 0) {
                     rspeed = rspeed - .0005;
