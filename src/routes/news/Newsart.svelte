@@ -22,6 +22,15 @@ const dimArticle = () => {
     newstextid.style.setProperty('background-color', '#202020');
 }
 
+const accepted_title_length = 85;
+let article_title = nnews.thread.title_full;
+let dotdotdot = "";
+
+if (article_title.length > accepted_title_length) {
+    dotdotdot = "...";
+}
+let article_sized = article_title.slice(0, accepted_title_length);
+article_sized = article_sized + dotdotdot;
 
 </script>
 
@@ -33,7 +42,7 @@ const dimArticle = () => {
             <a target="ggnews" href="{nnews.url}"><img alt="{nnews.title}" class="newsImg" src="{nnews.thread.main_image}" /></a>
         {/if}
         <div class="newstitle" bind:this={newstextid} >
-            <h3><a target="ggnews" href="{nnews.url}">{nnews.thread.title_full}</a></h3>
+            <h3><a target="ggnews" href="{nnews.url}">{article_sized}</a></h3>
             <h6><a target="ggnewsmain" href="http://www.{nnews.thread.site}">{nnews.thread.site}</a></h6>
         </div>
     </div>

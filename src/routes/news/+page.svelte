@@ -14,7 +14,7 @@ $: threads = data.threads['posts'];
 </svelte:head>
 <div class="gazette">
 	<div class="datehead">Creative Links
-		<div class="subdatehead">Entertainment tech news</div>
+		<div class="subdatehead">Automated entertainment tech news</div>
 	</div>
 	{#await threads}
 		Loading...
