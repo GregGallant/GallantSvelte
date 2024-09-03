@@ -6,10 +6,12 @@
 	//export const prerender = true;
 
 	/**
-	 * @param {object} aCube
+	 * @param {object} aStarfighter
 	 */
-	let aCube;
+	let aStarfighter;
     let goanim = false;
+
+    export let progressBar;
 
     export let mesh;
     export let rotation;
@@ -28,7 +30,7 @@
 
         const camera = new THREE.PerspectiveCamera( 75, perspective, 0.1, 1000 );
 
-		const renderer = new THREE.WebGLRenderer({ antialias: true, canvas:aCube });
+		const renderer = new THREE.WebGLRenderer({ antialias: true, canvas:aStarfighter });
 		renderer.setSize( 320, 240 );
         renderer.setAnimationLoop(); // wrap in timer or counter or something for memory
 		renderer.setClearColor( 0x01061c );
@@ -36,8 +38,6 @@
 		const geometry = new THREE.BoxGeometry( 2, 2, 2 );
 		const material = new THREE.MeshBasicMaterial( { color: 0x00ff90, wireframe: true } );
 		const cube = new THREE.Mesh( geometry, material );
-
-        const progressBar = document.getElementById('progressBar');
 
         let model1;
         let planeMesh;
@@ -65,12 +65,12 @@
 
 //https://gomakethings.com/listening-to-multiple-events-in-vanilla-js/ please...
 
-        aCube.addEventListener('mouseout', (event) => {
+        aStarfighter.addEventListener('mouseout', (event) => {
             goanim = false;
-            fwidth = aCube.width;
-            fheight = aCube.height;
-            hwidth = aCube.width / 2;
-            hheight = aCube.height / 2;
+            fwidth = aStarfighter.width;
+            fheight = aStarfighter.height;
+            hwidth = aStarfighter.width / 2;
+            hheight = aStarfighter.height / 2;
             pointer.x = -1;
             pointer.y = -1;
             if (memoryReady === false) {
@@ -79,11 +79,11 @@
             memoryReady = false;
         });
 
-        aCube.addEventListener('mousemove', (event) => {
+        aStarfighter.addEventListener('mousemove', (event) => {
             memoryReady = true;
             goanim = true;
             /*
-            console.log(aCube.width);
+            console.log(aStarfighter.width);
             console.log(event.currentTarget.offsetLeft);
             console.log(event.clientX);
             console.log(window.innerWidth);
@@ -94,10 +94,10 @@
             console.log(window.scrollY);
             */
 
-            fwidth = aCube.width;
-            fheight = aCube.height;
-            hwidth = aCube.width / 2;
-            hheight = aCube.height / 2;
+            fwidth = aStarfighter.width;
+            fheight = aStarfighter.height;
+            hwidth = aStarfighter.width / 2;
+            hheight = aStarfighter.height / 2;
 
             // X
             //console.log((event.clientX + window.scrollX) - event.currentTarget.offsetLeft);
@@ -112,9 +112,9 @@
             //console.log(window.screenLeft);
 
             //console.log(event.currentTarget.clientX);
-            //console.log(event.clientX - aCube.width);
-            //console.log( (event.clientX / aCube.width) );
-            //console.log(window.innerWidth / aCube.width);
+            //console.log(event.clientX - aStarfighter.width);
+            //console.log( (event.clientX / aStarfighter.width) );
+            //console.log(window.innerWidth / aStarfighter.width);
 
             pointer.x = ((event.clientX + window.scrollX) - event.currentTarget.offsetLeft);
             pointer.y = ((event.clientY + window.scrollY) - event.currentTarget.offsetTop);
@@ -262,7 +262,7 @@
 
             meshLoaded = true;
 
-            //progressBar.style.display = 'none';
+            progressBar.style.display = 'none';
 			//const model2 = new THREE.Mesh(model1, material);
 			scene.add(model1);
 
@@ -307,9 +307,9 @@
 
 		    },
             function (xhr) {
-                //console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
-           //     const percentComplete = (xhr.loaded / xhr.total) * 100;
-            //    progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
+                 //console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+                 const percentComplete = (xhr.loaded / xhr.total) * 100;
+                 progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
             },
 			undefined, function (error) {
 				console.log(error);
@@ -327,13 +327,12 @@
 	});
 
 </script>
-<canvas bind:this={aCube}></canvas>
-
+<canvas bind:this={aStarfighter}></canvas>
+<progress value="0" max="100" id="progressBar" bind:this={progressBar}></progress>
 <style>
 
 	canvas {
 		width:320px;
 		height:240px;
-		background-color: #eeeeee;
 	}
 </style>

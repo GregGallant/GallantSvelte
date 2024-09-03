@@ -85,7 +85,7 @@
 								<img src={svelteimg} alt="GoLang, Java, C#" width="320px" height="240px"/>
 							{:else}
 								<SkillboxGG mesh="spaceship" size="0.5" rotation="normal" />
-								<progress value="0" max="100" id="progressBar"></progress>
+
 							{/if}
 							<img class="monbot" src={monbot} alt="monitor bottom"/>
 						</div>
