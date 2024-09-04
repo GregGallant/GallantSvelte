@@ -1,0 +1,125 @@
+// About page
+
+$datePanel: #ffffff;
+$datePanelWidth: 120px;
+$datePanelHeight: 110px;
+$dayOfWeekWidth: 120px;
+
+div {
+  .calendar {
+    display:block;
+
+    background-image: radial-gradient(
+                    50% 50% at 50% 50%,
+                    rgba(245, 245, 254, 0.75) 20%,
+                    rgba(252, 254, 254, 0) 100%
+    ),
+    linear-gradient(180deg, white 0%, white 15%, rgba(250, 250, 254, 0.95) 50%);
+
+    background-size: cover;
+    background-color:#ffffff;
+    min-height:720px;
+
+    .calendar-header {
+      padding:10px 10px 10px 10px;
+      margin:10px 0 10px 0;
+      background-color:#c0c0c0;
+    }
+
+    .calendar-edit-column {
+      font-family:Helvetica, Arial, sans-serif;
+    }
+
+    .editdate {
+      font-family:Helvetica, Arial, sans-serif;
+      font-size:1.4em;
+      font-weight:bold;
+      color:#3a5f9d;
+      padding:22px 0 12px 15px;
+      span {
+        color:#9a9f9d;
+        font-size:0.6em;
+        letter-spacing:0.2em;
+        font-weight:normal;
+      }
+    }
+
+    .calendar-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding:20px 20px 20px 20px;
+
+      h1 {
+        font-family:Anton, Helvetica, Arial, sans-serif;
+        font-size:1.8em;
+        color:#3a5f9d;
+      }
+
+      h2 {
+        padding-top:30px;
+      }
+
+
+      h5 {
+        a {
+          color: $cadet_blue;
+        }
+      }
+    }
+  }
+
+  .dayOfWeekHeader {
+    display:flex;
+    flex-direction:row;
+    .dayOfWeek {
+      flex: 7 1 auto;
+      margin:0 1px 0 0;
+      padding: 10px 0 10px 0;
+      font-weight: bold;
+      width: $dayOfWeekWidth;
+      min-width:$dayOfWeekWidth;
+      max-width:$dayOfWeekWidth;
+    }
+  }
+
+  .calendarBoard {
+    position:relative;
+    display:block;
+
+    .calendarWrap {
+      display:block;
+      flex-direction:row;
+
+        .datePanel {
+          position:absolute;
+          border:1px solid #333333;
+          width:$datePanelWidth;
+          height:$datePanelHeight;
+          background-color:$datePanel;
+          cursor: pointer;
+          .dayOfMonth {
+            font-family:Lowvetica, Anton, sans-serif;
+            font-size:1.2em;
+            color:#20435f;
+            padding:5px 5px 5px 10px;
+          }
+        }
+
+        .blankPanel {
+          position:absolute;
+          width:$datePanelWidth;
+          height:$datePanelHeight;
+        }
+    }
+  }
+
+  .editor-wrapper {
+    display:block;
+    .editor-pane {
+      min-height:520px;
+    }
+  }
+
+}
