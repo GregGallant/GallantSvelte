@@ -2,7 +2,7 @@
 	import {onMount} from 'svelte';
 	import {page} from '$app/stores';
 	import bkarrow from '$lib/images/bkarrow_w1.png';
-	import 'quill/dist/quill.core.css';
+	//import 'quill/dist/quill.core.css';
 
 
 	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -15,9 +15,9 @@
 	uData = uData.slice(2);
 	iuData = uData.split('z0g');
 	izData = iuData[1].split('y0x');
-	console.log("dat from edit1: " + iuData[0]);
-	console.log("dat from edit2: " + izData[0]);
-	console.log("dat from edit3: " + izData[1]);
+	//console.log("dat from edit1: " + iuData[0]);
+	//console.log("dat from edit2: " + izData[0]);
+	//console.log("dat from edit3: " + izData[1]);
 
 	let monthName = months[izData[0]];
 	let laDia = iuData[0];
@@ -62,6 +62,7 @@
 	<div class="editdate">
 		<a href="/calendar"><img src={bkarrow} alt="back to calendar" /></a>
 		&nbsp;&nbsp;&nbsp; <!-- TODO: no nbsps -->
+		<div style="font-size:0.6em; font-weight:normal; background-color:#ffcc73; font-style:italic; margin-right:10px; padding:5px; float:right">demo</div>
 		<span>Notes:</span> {editDate}</div>
 	<div class="calendar-edit-column">
 		<style>

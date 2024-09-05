@@ -29,10 +29,10 @@ arYear = now.getFullYear();
 const addCalendarButtons = () => {
 
     // Get local client time
-    console.log("Now obj: " + now);
-    console.log("Date: " + now.getDate());
-    console.log("Month: " + now.getMonth());
-    console.log("Day" + now.getDay());
+    //console.log("Now obj: " + now);
+    //console.log("Date: " + now.getDate());
+    //console.log("Month: " + now.getMonth());
+    //console.log("Day" + now.getDay());
 
 
     // Calendar Header
@@ -145,8 +145,8 @@ for (let xxi = 0; xxi < daysForMonth; xxi++) {
     dfmArr.push(xxi);
 }
 
-console.log('dfm');
-console.log(dfmArr);
+//console.log('dfm');
+//console.log(dfmArr);
 
 let test = addCalendarButtons();
 //console.log(test);
@@ -158,7 +158,7 @@ let forEditor;
 // Edit / Save data
 today = months[arMonth] + " " + arDay + ", " + arYear;
 forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
-console.log('for Edit: ' + forEditor);
+//console.log('for Edit: ' + forEditor);
 
 </script>
 

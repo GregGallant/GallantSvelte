@@ -1,4 +1,4 @@
-$footerBackground:#2a7f82;
+$footerBackground:#6aafc2;
 $footerHeight: 245px;
 $footerMinHeight: 245px;
 $footerMinHeightMobile: 190px;
@@ -21,12 +21,12 @@ div {
     min-height: $footerMinHeight;
     max-height: $footerMaxHeight;
     background-color: $footerBackground;
+    background: linear-gradient($footerBackground, #4a9fbf);
     border-top:1px solid $lapis-lazuli;
     padding:0 0 40px 0;
 
     .foot-generic {
-      padding: 5px 0 0 0;
-      background-color:$body-back;
+      padding: 10px 0 0 10px;
       img {
         max-width:175px;
       }
@@ -41,19 +41,19 @@ div {
           clear:both;
           font-family:Tenor_Sans, serif;
           text-decoration:none;
-          font-size:1em;
+          font-size:0.9em;
           padding:4px 0 4px 0;
           line-height:1.2em;
-          color:$lemon-meri;
+          color: #2f1c09;
           a {
-            color:$lemon-meri;
+            color: #5f4c39;
           }
         }
       }
     }
 
     .foot_place_1 {
-      padding:2px 10px 10px 22px;
+      padding:0 10px 10px 22px;
       text-align:left;
     }
 
@@ -62,14 +62,14 @@ div {
       span {
         padding: 0 0 10px 0;
         margin: 0 0 0 0;
-        color:$lemon-meri;
+        color: #2f1c09;
         font-family: Lora, serif;
       }
       div {
         padding: 0 30px 0 0;
-        color:#ffffff;
+        color: #5f4c49;
         font-family:Helvetica, Arial, sans-serif;
-        font-size:.9em;
+        font-size:.8em;
         font-weight:bold;
         &.fname {
           font-weight:normal;

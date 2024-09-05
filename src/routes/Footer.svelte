@@ -1,5 +1,5 @@
 <script>
-    import gmedialogo from '$lib/images/gone_logo.png';
+    import gmedialogo from '$lib/images/gallantoneLogo24.png';
 </script>
 <footer>
     <div class="footer">
