@@ -2,7 +2,8 @@
     import goodburger from '$lib/images/goodburger50.png';
     import gmedialogo from '$lib/images/gallantoneLogo24.png';
     import {page} from "$app/stores";
-    import github from "$lib/images/github.svg";
+    import github from "$lib/images/github.png";
+    import calendarIcon from "$lib/images/calendar_icon.png";
 
     import {onMount} from 'svelte';
 
@@ -54,14 +55,14 @@
             <li on:click={()=>location.href='/news' } aria-current={$page.url.pathname.match('\/news(\/)?(\d?)*') ? 'page' : undefined}>
                 <a href="/news">News</a>
             </li>
-            <li on:click={()=>location.href='/calendar'} aria-current={$page.url.pathname === '/calendar' ? 'page' : undefined}>
-                <a href="/calendar">Calendar</a>
-            </li>
             <li on:click={()=>location.href='/about'} aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
                 <a href="/about">Development</a>
             </li>
             <li class="corner">
-                <a href="https://github.com/GregGallant">
+                <a href="/calendar">
+                    <img src={calendarIcon} alt="GallantOne Calendar" class="calIcon" />
+                </a>
+                <a target="ggithub" href="https://github.com/GregGallant">
                     <img src={github} alt="GitHub" />
                 </a>
             </li>
@@ -110,4 +111,8 @@
         object-fit: contain;
     }
 
+    img.calIcon {
+        padding: 0;
+        margin:0 8px 0 0;
+    }
 </style>

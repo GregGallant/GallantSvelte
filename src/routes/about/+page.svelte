@@ -40,11 +40,11 @@
 			Regarding Safari memory, keeping requests to animation frames as low as possible is also a must, meaning there shouldn't be any runaway requests happening outside of any event handling. This keeps everything extremely light in regards to memory, can be easily measured within browser developer tools and
 			keeps in line with Apple's strict memory protocols.
 		</p>
-		<h3>A Svelte Calendar</h3>
+		<h3>A <a href="/calendar">Svelte Calendar</a></h3>
 		<p>Years ago I created a Unity app featuring a calendar developed in C#.  It was fully meshed and 3D on top of the functionality of the calendar.
 			<img src={cSharpCal} alt="Unity Calendar App" class="unityapp" />
 			The app did not see much action but I recently ported this to Javascript and specifically within the Svelte framework.  It has similar functionality via a notepad each date.
-			This will soon be full featured as was the Unity app, however there are authentication needs since this is web app based.
+			This will soon be full featured as was the Unity app, however there are authentication needs since this is web app based.  <a href="/calendar">Check out the calendar development here.</a>
 		</p>
 		<h3>Docker / Kubernetes</h3>
 		<p>I dockerize each workspace now, instead of running bare metal and am using Circle CI to integrate everything.  It's great to have a blueprint of services for a project that you can also run and manage at the same time.  I run Docker inside Akamai servers on Debian linux and use Kubernetes as a local stage, but I will most likely be shelling out for a total Kubernetes run environment. Adding load balanced pods so easily as a simple parameter is a big deal to me and rolling deployments would make things a little easier.</p>
@@ -57,6 +57,15 @@
 </div>
 
 <style lang="scss">
+
+	a:link {
+		color: #3a7fa3;
+	}
+
+	a:visited {
+		color: #3a7fa3;
+	}
+
 	p {
 		font-family: Lora, sans-serif;
 		a:link {
