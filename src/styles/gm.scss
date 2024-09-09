@@ -243,6 +243,23 @@ div.blahdiv {
     }
 }
 
+img.unityapp {
+    float:right;
+    padding:10px;
+    wrap-option:after;
+    word-wrap: initial;
+    text-wrap: inherit;
+}
+
+img.cronvegaImg {
+    float:right;
+    padding:10px 10px 10px 10px;
+    margin-left:10px;
+    wrap-option:after;
+    word-wrap: initial;
+    text-wrap: inherit;
+    border: 1px solid #cfcfcf;
+}
 
 
 // MEDIA QUERIES //

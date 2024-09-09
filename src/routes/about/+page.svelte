@@ -21,9 +21,9 @@
 		</p>
 		<h3>Go instead of Java</h3>
 		<p>
-			The backend for this site was originally Java Spring Boot, but that was updated to Go for stronger development and less annotations.  Java was my first real programming language first used in the late 90's and it is indeed a very strong and fast language. PHP professionaly became the language I worked with for many years after (pre and post Laravel).
-			Go is a great language to code and work with.
+			The backend for this site was originally Java Spring Boot, but that was updated to Go for stronger development and less annotations.  If one doesn't count BASIC as a learned language way back in the 80's or functions learned in multivariable Calculus in college, then Java was my first real programming language, first used in the late 90's and it is indeed a very strong and fast language. After using Perl/CGI, PHP became the language I worked with professionally for many years after (pre and post Laravel).
 			<br/> <br/>
+			Go is a great language to code and work with.
 			I liked Go so much I received a three class <a target="certs" href="https://www.coursera.org/account/accomplishments/certificate/XSSDK6YPCZ6C">certification from the University of California, Irivne</a>.
 			The news automation, which I had previously written in Java Spring Boot, is now all rewritten in Go.  I am far more productive in using Go to bring up servers, automate API calls, authentication and authorization and especially working with time and date calculations (as compared to older Java).  Concurrency in Go is much easier to work with compared to Java, in my humble opinion, and is a major strength in regards to how Go handles multicore processing.
 		</p>
@@ -81,23 +81,7 @@
 		text-align: right;
 	}
 
-	img.unityapp {
-		float:right;
-		padding:10px;
-		wrap-option:after;
-		word-wrap: initial;
-		text-wrap: inherit;
-	}
 
-	img.cronvegaImg {
-		float:right;
-		padding:10px 10px 10px 10px;
-		margin-left:10px;
-		wrap-option:after;
-		word-wrap: initial;
-		text-wrap: inherit;
-		border: 1px solid #cfcfcf;
-	}
 
 	pre {
 		a:link {

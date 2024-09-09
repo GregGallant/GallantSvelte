@@ -151,6 +151,12 @@ header {
 
   header {
     div {
+      &.logohead {
+        text-align:left;
+        img {
+          max-width:190px;
+        }
+      }
       &.menuhead {
         ul {
           right:0;
@@ -227,10 +233,21 @@ header {
 // Mobile
 @mixin header-mobile() {
 
+  main {
+    margin: 92px auto 0 auto;
+  }
+
   header{
     div {
+      &.logohead {
+        text-align:left;
+        padding:42px 0 2px 9px;
+        img {
+          max-width:150px;
+        }
+      }
       &.menuhead {
-        width:42%;
+        width:52%;
         ul {
           display: none;
           height:70px;
@@ -336,11 +353,16 @@ header {
 
 @mixin header-tiny() {
 
+  main {
+    margin: 88px auto 0 auto;
+  }
+
   header{
     max-width:369px;
     div {
       &.logohead {
         text-align:left;
+        padding:42px 0 2px 9px;
         img {
           max-width:150px;
         }
