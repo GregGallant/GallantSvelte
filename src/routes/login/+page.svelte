@@ -38,12 +38,20 @@
     }
 
 </script>
-<form on:submit|preventDefault={login}>
-    <label for="username">Username</label><br/>
-    <input bind:value={username} type="text" id="username" name="username" placeholder="Username" />
-    <br/><br/>
-    <label for="password">Password</label><br/>
-    <input bind:value={password} type="password" id="password" name="password" placeholder="Password" />
-    <br/><br/>
-    <button type="submit">Login</button>
-</form>
+<div class="regcontent">
+    <div id="contentPane" class="reghero">
+        <div class="formWrap">
+            <h1>Login</h1>
+            <div class="validationBanner" id="validationBanner"></div>
+            <div id="registerResults" class="subhed">
+            <form on:submit|preventDefault={login}>
+                <input class="form-control formy" bind:value={username} type="text" id="username" name="username" placeholder="Username" />
+                <br/>
+                <input class="form-control formy" bind:value={password} type="password" id="password" name="password" placeholder="Password" />
+                <br/>
+                <button id="loginButton" class="loginSubmit btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>

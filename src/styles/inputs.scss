@@ -7,7 +7,7 @@ $textformWidth:525px;
 $formBackWidth:700px;
 $formBackWidthTablet:380px;
 $formBackWidthMobile:320px;
-$loginWidth:350px;
+$loginWidth:520px;
 $loginWidthMobile:300px;
 
 form {
@@ -182,7 +182,9 @@ h2#contactHeader {
 
 .loginSubmit {
   width:$loginWidth;
-  background-color:#1f3f83;
+  height:44px;
+  border-radius:5px;
+  background-color:$menu-blue;
   color:#ffffff;
   font-size:1em;
   font-weight:normal;
@@ -231,15 +233,35 @@ input.formwide {
 }
 
 #loginButton {
+  margin:8px 0 0 0;
   border:2px outset $lapis-lazuli;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.30);
+  cursor:pointer;
+}
+
+#loginButton:hover {
+  background-color:#fff0b0;
+  color:#333333;
+  border:2px outset #ccbf9c;
 }
 
 #registerButton {
-  border:2px outset $lapis-lazuli;
+  margin:1px 0 0 0;
+  border:2px outset $menu-blue;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.30);
+  cursor:pointer;
 }
 
+#registerButton:hover {
+  background-color:#fff0b0;
+  color:#333333;
+  border:2px outset #ccbf9c;
+}
+
+.formWrap {
+  margin: 0 auto;
+  max-width:570px;
+}
 
 .has-warning {
   color:#ff5333;
@@ -255,6 +277,31 @@ input.formwide {
   visibility: visible;
   border: 1px solid #ff5333;
 }
+
+div {
+  .regcontent {
+    text-align:center;
+
+    #contentPane {
+      text-align: center;
+      margin: 0 auto;
+
+      form {
+        margin: 0 auto;
+        text-align:center;
+
+        input.formy {
+          display:inline;
+          width:500px;
+        }
+      }
+    }
+  }
+
+
+}
+
+// Responsive
 
 @mixin inputs-desktop() {
 

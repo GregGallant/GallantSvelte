@@ -38,6 +38,29 @@ div {
     }
   }
 
+  &.reghero {
+    width:100%;
+    min-height: 614px; /* needs responsive */
+    background-color: $midnight-green;
+    background: url('$lib/images/sunstar.jpg') 40% 40% no-repeat;
+    background-size: cover;
+    border-top: 1px solid $queen-blue;
+    border-bottom: 1px solid $queen-blue;
+    text-align:left;
+
+    h1 {
+      text-transform: uppercase;
+      font-family: FjallaOne, Anton, Helvetica, Arial, sans-serif;
+      font-size: 3.2em;
+      color: #433c2f;
+      padding: 40px 9px 0 20px;
+      letter-spacing:1.1px;
+      margin: 0;
+      text-align:left;
+      margin:0 0 7px 7px;
+    }
+  }
+
   &.contentHorizon {
     display:block;
     width:100%;

@@ -1,0 +1,94 @@
+<script>
+    import {goto, invalidateAll} from '$app/navigation';
+
+    let username = '';
+    let password = '';
+
+    /** @type {import('./$types').Snapshot<string, string>} */
+    export const snapshot = {
+        capture: () => {
+            return {
+                username,
+                password
+            }
+        },
+        restore: (value) => {
+            username = value.username;
+            password = value.password;
+        }
+    };
+
+    /** @type {import('./$types').PageLoad} */
+    const register = async () => {
+
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            body: JSON.stringify({username, password})
+        });
+        const resJSON = await response.json();
+
+        if (response.ok) {
+            //goto('/', {invalidateAll: true});
+            invalidateAll();
+        } else {
+            alert(resJSON.message);
+        }
+
+        //alert('static adapter')
+    }
+
+</script>
+    <div class="regcontent">
+        <div id="contentPane" class="reghero">
+            <div class="formWrap">
+            <h1>Register</h1>
+            <div class="validationBanner" id="validationBanner"></div>
+            <div id="registerResults" class="subhed">
+                <form method="post" on:submit|preventDefault={register}>
+                    <input id="email" value="" onChange="" type="text" name="email" class="form-control formy" placeholder="Email" autoFocus="true"/>
+                    <br/>
+                    <input id="password" value="" onChange="" type="password" name="password" class="form-control formy" placeholder="Password"/>
+                    <br/>
+                    <input id="cpassword" value="" onChange="" type="password" name="confirmpassword" class="form-control formy" placeholder="Confirm your password"/>
+                    <br/>
+                    <input id="firstName" value="" onChange="" type="text" name="firstName" class="form-control formy" placeholder="First Name"/>
+                    <br/>
+                    <input id="lastName" value="" onChange="" type="text" name="lastName" class="form-control formy" placeholder="Last Name"/>
+                    <br/>
+                    <div class="checkboxFormy">
+                        <input type="checkbox" id="newsletterWant" value=""> <div class="newsletter">Please send me occasional information about app updates and new features.</div>
+                    </div>
+                    <br/>
+                    <button id="registerButton" class="loginSubmit btn btn-lg btn-primary btn-block" type="button">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+<!--
+    <label for="username">Username</label><br/>
+    <input bind:value={username} type="text" id="username" name="username" placeholder="Username" />
+    <br/><br/>
+    <label for="password">Password</label><br/>
+    <input bind:value={password} type="password" id="password" name="password" placeholder="Password" />
+    <br/><br/>
+    <button type="submit">Login</button>
+    -->
+
+<style lang="scss">
+  form {
+    .checkboxFormy {
+      margin:8px 0 0 24px;
+      padding:10px 10px 10px 10px;
+      text-align:left;
+        div.newsletter {
+          display:inline;
+          font-family:Helvetica, Arial, sans-serif;
+          font-style:italic;
+          font-size:.85em;
+          color:#222222;
+          text-align:left;
+        }
+    }
+  }
+</style>
