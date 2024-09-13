@@ -2,7 +2,7 @@
     import {onMount, beforeUpdate} from 'svelte';
 
     let now = new Date();
-    let arDay = now.getDay() + 1;
+    let arDay = now.getDate();
 
     let eachDatePanel;
 
@@ -22,6 +22,8 @@
 
     //console.log("FromDatePanel: " + posX + " " + posY);
 
+    console.log(arDay);
+    console.log(dayOfMonth);
     onMount( () => {
         eachDatePanel.style.setProperty('left', posX+"px");
         eachDatePanel.style.setProperty('top', posY+"px");

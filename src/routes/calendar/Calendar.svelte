@@ -6,7 +6,7 @@ const dwidth = 120;
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 const monthcodes = [-1,0,3,3,6,1,4,6,2,5,0,3,5];
 
@@ -22,7 +22,7 @@ let arYear;
 let isLeapYear;
 
 // From abstracted array
-arDay = now.getDay() + 1;
+arDay = now.getDate();
 arMonth = now.getMonth();
 arYear = now.getFullYear();
 

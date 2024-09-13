@@ -41,7 +41,7 @@
     <div class="regcontent">
         <div id="contentPane" class="reghero">
             <div class="formWrap">
-            <h1>Register</h1>
+            <h1>Sign Up</h1>
             <div class="validationBanner" id="validationBanner"></div>
             <div id="registerResults" class="subhed">
                 <form method="post" on:submit|preventDefault={register}>

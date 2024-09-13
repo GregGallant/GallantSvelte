@@ -17,10 +17,9 @@
     <title>About</title>
     <meta name="description" content="About this app" />
 </svelte:head>
-<Counter2 />
 <div class="text-column">
     <h1>{data.title}</h1>
-    <h2>Ferrari test deployment</h2>
+    <h2>Testing possibly successful, here's some Ferarris</h2>
     {#if products && products.length > 0}
         <ul>
             {#each products as product}
@@ -33,6 +32,7 @@
             {/each}
         </ul>
     {/if}
+    <Counter2 />
     <p>
         Prerendering tests:
         {JSON.stringify($page.params)}

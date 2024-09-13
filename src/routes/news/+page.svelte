@@ -5,7 +5,6 @@ import NewsArt from "./Newsart.svelte";
 /** @type {import('.$types').PageData} */
 export let data;
 $: threads = data.threads['posts'];
-
 </script>
 
 <svelte:head>
