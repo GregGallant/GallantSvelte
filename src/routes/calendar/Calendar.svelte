@@ -42,6 +42,7 @@ const addCalendarButtons = () => {
 
 // Determines if year is a leap year
 const checkLeapYear = (year) => {
+
     if (year % 4 === 0 && (year % 100) !== 0 || year % 400 === 0)
     {
         days_in_month[1] = 29;
@@ -91,7 +92,6 @@ const getDayCode = () => {
     let isly = 0;
 
     let isleapyear = checkLeapYear(arYear);
-
     if (isleapyear)
     {
         isly = 1;
@@ -99,8 +99,8 @@ const getDayCode = () => {
 
     //double year = (double)mdate.Year;
     //let year =  arYear; // not sure if should be full year or 1900 + yearVal
-
-    let month = arMonth-1; // TODO: WTF, needs check
+//    console.log("MONTH NUM: " + arMonth);
+    let month = arMonth ; // TODO: needs check
 
     let yearcode = getYearCode(arYear);
 
@@ -113,7 +113,9 @@ const getDayCode = () => {
 
     let monthcode = monthcodes[month];
 
-    daycode = (tdy + d1 + monthcode + yearcode + 1 - isly) % 7;
+    daycode = (tdy + d1 + monthcode + yearcode - 3 - isly) % 7;
+
+    //console.log("DAYCODE: " + daycode);
 
     return daycode;
 }
@@ -139,10 +141,14 @@ let DayCode = getDayCode();
  */
 
 let daysForMonth = days_in_month[arMonth];
+//console.log("DAYS FOR MONTH: " + daysForMonth);
 let dfmArr = [];
 
 for (let xxi = 0; xxi < daysForMonth; xxi++) {
     dfmArr.push(xxi);
+    for ( let dci = 0; dci < daycode; dci++ ) {
+        dfmArr.push(0);
+    }
 }
 
 //console.log('dfm');
@@ -181,7 +187,7 @@ forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
             {:else if j > 20 && j < 28}
                 <DatePanel posX={xk*dwidth} posY="330" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
                 <span>{xk = j - 21}</span>
-            {:else if j > 27 && j < (daysForMonth+1)}
+            {:else if j > 27 && j < (daysForMonth+2)}
                 <DatePanel posX={xm*dwidth} posY="440" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
                 <span>{xm = j - 28}</span>
             {:else}

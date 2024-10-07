@@ -47,6 +47,7 @@
             goto('/testdb/success', {invalidateAll: true});
            // invalidateAll();
         } else {
+            console.log("POST method failed");
             alert(resJSON.message);
         }
     }

@@ -1,6 +1,10 @@
 <script>
 	import Skillbox from './Skillbox.svelte';
 	import SkillboxAnim from './SkillboxAnim.svelte';
+
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+
 	import SkillboxCustom from './SkillboxCustom.svelte';
 	import SkillboxGG from './SkillboxGG.svelte';
 	import SkillboxSVG from './SkillboxSVG.svelte';
@@ -32,9 +36,9 @@
 </svelte:head>
 <div class="content">
 	<div class="headerSpace">
-		<div class="hed">
-			<h1>Build for Tomorrow</h1>
-			<div class="subhed">
+		<div class="hed" >
+			<h1 transition:fly={{ delay: 250, duration: 700, x: -900, y: 0, opacity: 0.5, easing: quintOut }}>Build for Tomorrow</h1>
+			<div class="subhed"  transition:fly={{ delay: 900, duration: 700, x: -900, y: 0, opacity: 0.5, easing: quintOut }}>
 				<span>Technical Art & Development of Greg A. Gallant</span>
 			</div>
 		</div>
