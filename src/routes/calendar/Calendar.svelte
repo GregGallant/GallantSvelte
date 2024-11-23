@@ -109,11 +109,11 @@ const getDayCode = () => {
 
     let tdy = twodigityear;
 
-    let d1 = twodigityear / 4;
+    let d1 = (twodigityear / 4) ;
 
     let monthcode = monthcodes[month];
 
-    daycode = (tdy + d1 + monthcode + yearcode - 3 - isly) % 7;
+    daycode = (tdy + d1 + monthcode + yearcode - 2 - isly) % 7;
 
     //console.log("DAYCODE: " + daycode);
 
@@ -187,7 +187,7 @@ forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
             {:else if j > 20 && j < 28}
                 <DatePanel posX={xk*dwidth} posY="330" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
                 <span>{xk = j - 21}</span>
-            {:else if j > 27 && j < (daysForMonth+2)}
+            {:else if j > 27 && j < (daysForMonth+DayCode)}
                 <DatePanel posX={xm*dwidth} posY="440" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
                 <span>{xm = j - 28}</span>
             {:else}
