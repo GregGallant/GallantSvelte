@@ -113,7 +113,7 @@ const getDayCode = () => {
 
     let monthcode = monthcodes[month];
 
-    daycode = (tdy + d1 + monthcode + yearcode - 2 - isly) % 7;
+    daycode = (tdy + d1 + monthcode + yearcode - 3 - isly) % 7;
 
     //console.log("DAYCODE: " + daycode);
 
@@ -203,10 +203,6 @@ forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
 </div>
 
 <style lang="scss">
-    pre {
-      color:#ffffff;
-    }
-
     span {
       display:none;
     }

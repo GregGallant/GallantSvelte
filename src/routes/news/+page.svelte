@@ -5,6 +5,20 @@ import NewsArt from "./Newsart.svelte";
 /** @type {import('.$types').PageData} */
 export let data;
 $: threads = data.threads['posts'];
+
+$: {
+	if (typeof(threads) != "undefined") {
+
+		let rthreads = [];
+		let maxthread = threads.length - 1;
+
+		for (let i = 0; i < threads.length; i++ ) {
+			rthreads.push(threads[maxthread - i]);
+		}
+		threads = rthreads;
+	}
+}
+
 </script>
 
 <svelte:head>
