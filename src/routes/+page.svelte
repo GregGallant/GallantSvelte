@@ -14,6 +14,8 @@
 	import monbot from '$lib/images/mon_bot.png';
 	import dockerkube from '$lib/images/dockerkube.png';
 
+	import musicpromo from '$lib/images/cvmusicpromo.png';
+	import golang from '$lib/images/golang.png';
 
 	import icosimg from '$lib/images/icos.png';
 	import gojavaimg from '$lib/images/gojava.png';
@@ -43,6 +45,34 @@
 			</div>
 		</div>
 		<div class="centered">
+			<div class="promoHorizon">
+				<div class="skillHeader"> In Development...</div>
+				<div class="promoContent">
+					<div class="leftPromo">
+						<a href="https://www.cronvega.com/music"><img src={musicpromo} alt="Cronvega Music" /></a>
+					</div>
+					<div class="rightPromo">
+						<div class="whback">
+						<img src={golang} alt="go logo" />
+						</div>
+						<div class="wheader"><a href="https://www.cronvega.com/music">Cronvega Music</a></div>
+							<ul class="skillpoints">
+								<li>
+									Go powered music API
+								</li>
+								<li>
+									React Router / Tanstack Frontend
+								</li>
+								<li>
+									Streaming music on multiple devices
+								</li>
+								<li>
+									Docker / Akamai production deployment
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
 			<div class="contentHorizon">
 				<div class="skillHeader">
 					Full-Stack Software Engineering

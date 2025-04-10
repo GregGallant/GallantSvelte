@@ -8,7 +8,8 @@ import { json, error } from '@sveltejs/kit';
 export const GET = async ({fetch}) => {
 
     // *** STAGE/PROD ***/
-    let newsURL = 'http://golang-ggc:8888/webhose';
+    //let newsURL = 'https://golang-ggc:8888/webhose';
+    let newsURL = 'https://www.gallantmedia.net:8888/webhose';
 
     // *** DEV TEST TODO: env vars ***/
     //let newsURL = 'http://localhost:8888/webhose';

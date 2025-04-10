@@ -52,8 +52,8 @@
             <li on:click={()=>location.href='/'} aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
                 <a href="/">Home</a>
             </li>
-            <li on:click={()=>location.href='/news' } aria-current={$page.url.pathname.match('\/news(\/)?(\d?)*') ? 'page' : undefined}>
-                <a href="/news">News</a>
+            <li on:click={()=>location.href='https://www.cronvega.com/news' } aria-current={$page.url.pathname.match('\/news(\/)?(\d?)*') ? 'page' : undefined}>
+                <a href="https://www.cronvega.com/news">News</a>
             </li>
             <li on:click={()=>location.href='/about'} aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
                 <a href="/about">Development</a>
@@ -77,8 +77,8 @@
                 <li on:mouseover={()=>{cancelSoftClose();}} on:mouseout={()=>{softCloseMenu();}} on:click={()=>  { location.href='/'; }  } class="dropdown-item" aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
                     <a href="/">Home</a>
                 </li>
-                <li on:mouseover={()=>{cancelSoftClose();}} on:mouseout={()=>{softCloseMenu();}} on:click={()=> { location.href='/news'; } } class="dropdown-item" aria-current={$page.url.pathname.match('\/news(\/)?(\d?)*') ? 'page' : undefined}>
-                    <a href="/news" data-sveltekit-preload-data="hover">News</a>
+                <li on:mouseover={()=>{cancelSoftClose();}} on:mouseout={()=>{softCloseMenu();}} on:click={()=> { location.href='https://www.cronvega.com/news'; } } class="dropdown-item" aria-current={$page.url.pathname.match('\/news(\/)?(\d?)*') ? 'page' : undefined}>
+                    <a href="https://www.cronvega.com/news" data-sveltekit-preload-data="hover">News</a>
                 </li>
                 <li on:mouseover={()=>{cancelSoftClose();}} on:mouseout={()=>{softCloseMenu();}} on:click={()=>{ location.href='/about';} } class="dropdown-item" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
                     <a href="/about">Development</a>

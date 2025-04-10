@@ -27,6 +27,7 @@ const accepted_title_length = 85;
 const regex19 = /\\u2019/gi;
 const squotes = /\\"/gi;
 let article_title = nnews.thread.title_full.replaceAll("\\u0027", "'");
+article_title = article_title.replaceAll("\\uFFFD", "");
 article_title = article_title.replaceAll("\&quot;", "'");
 article_title = article_title.replaceAll("&amp;", "&");
 

@@ -195,6 +195,84 @@ div {
     }
   }
 
+  &.promoHorizon {
+    display:block;
+    width:100%;
+    background-color:#6aafc2;
+    color:#292929;
+    font-family:FjallaOne, Helvetica, sans-serif;
+    font-size:1.3em;
+    text-align:center;
+    margin:0 auto;
+    background-image: radial-gradient(
+                    50% 50% at 50% 50%,
+                    rgba(175, 215, 235, 0.75) 0%,
+                    rgba(105, 175, 195, 0) 100%
+    ),
+    linear-gradient(180deg, #5abfd2 0%, #6abfd2 15%, #6aafc2 50%);
+
+    .promoContent {
+      display:flex;
+      flex-direction:row;
+      text-align:left;
+      padding:17px 0 50px 10px;
+      .leftPromo {
+        flex:1 auto;
+      }
+      .rightPromo {
+        padding:20px 0 0 0;
+        flex:1 auto;
+        justify-content: right;
+        text-align:right;
+        margin-right:10px;
+        color:#ffefdf;
+        .whback {
+          display:flex;
+          flex-direction:row;
+          text-align:left;
+          background-color:#ffffff;
+          border-radius:10px;
+          min-width:400px;
+        }
+        .wheader {
+          text-align:left;
+          padding:20px 0 0 10px;
+          font-size:2.0em;
+          text-transform:uppercase;
+          color:#000030;
+          a {
+            color:#200f5f;
+          }
+          a:hover {
+            color: #c03070;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+    .skillHeader {
+      font-family: FjallaOne, Helvetica, sans-serif;
+      text-align:left;
+      padding:10px;
+      background-color:$off-meri;
+      letter-spacing:.05em;
+      font-size:0.9em;
+    }
+    ul.skillpoints {
+      padding:7px 0 20px 10px;
+      margin:5px 0 0 0;
+      li {
+        font-family: Gudea, sans-serif;
+        font-size:1em;
+        margin:0 0 0.5em 0;
+        list-style: none;
+        padding:0 10px 0 0;
+        text-align:left;
+        color:#000030;
+      }
+    }
+  }
+
   .clearme {
     display:block;
     clear:both;
@@ -350,6 +428,89 @@ div {
         padding-top:18px;
       }
     }
+
+    &.promoHorizon {
+      display:block;
+      width:100%;
+      background-color:#6aafc2;
+      color:#292929;
+      font-family:FjallaOne, Helvetica, sans-serif;
+      font-size:1.3em;
+      text-align:center;
+      margin:0 auto;
+      background-image: radial-gradient(
+                      50% 50% at 50% 50%,
+                      rgba(175, 215, 235, 0.75) 0%,
+                      rgba(105, 175, 195, 0) 100%
+      ),
+      linear-gradient(180deg, #5abfd2 0%, #6abfd2 15%, #6aafc2 50%);
+
+      .promoContent {
+        display:flex;
+        flex-direction:row;
+        text-align:left;
+        padding:17px 0 50px 10px;
+        .leftPromo {
+          flex:1 auto;
+          img {
+            width:90%;
+          }
+        }
+        .rightPromo {
+          padding:20px 0 0 0;
+          flex:1 auto;
+          justify-content: right;
+          text-align:right;
+          margin-right:10px;
+          color:#ffefdf;
+          .whback {
+            display:flex;
+            flex-direction:row;
+            text-align:left;
+            background-color:#ffffff;
+            border-radius:10px;
+            min-width:200px;
+          }
+          .wheader {
+            text-align:left;
+            padding:20px 0 0 10px;
+            font-size:2.0em;
+            text-transform:uppercase;
+            color:#000030;
+            a {
+              color:#200f5f;
+            }
+            a:hover {
+              color: #c03070;
+              text-decoration:none;
+            }
+          }
+        }
+      }
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        text-align:left;
+        padding:10px;
+        background-color:$off-meri;
+        letter-spacing:.05em;
+        font-size:0.8em;
+      }
+      ul.skillpoints {
+        padding:7px 0 20px 10px;
+        margin:5px 0 0 0;
+        li {
+          font-family: Gudea, sans-serif;
+          font-size:0.8em;
+          margin:0 0 0.5em 0;
+          list-style: none;
+          padding:0 10px 0 0;
+          text-align:left;
+          color:#000030;
+        }
+      }
+    }
+
+
     &.contentHorizon2 {
       display:block;
       background-color:$flexHeader2;
@@ -496,6 +657,89 @@ div {
         padding-top:18px;
       }
     }
+
+
+    &.promoHorizon {
+      display:block;
+      width:100%;
+      background-color:#6aafc2;
+      color:#292929;
+      font-family:FjallaOne, Helvetica, sans-serif;
+      font-size:1.3em;
+      text-align:center;
+      margin:0 auto;
+      background-image: radial-gradient(
+                      50% 50% at 50% 50%,
+                      rgba(175, 215, 235, 0.75) 0%,
+                      rgba(105, 175, 195, 0) 100%
+      ),
+      linear-gradient(180deg, #5abfd2 0%, #6abfd2 15%, #6aafc2 50%);
+
+      .promoContent {
+        display:flex;
+        flex-direction:row;
+        text-align:left;
+        padding:17px 0 50px 10px;
+        .leftPromo {
+          flex:1 auto;
+          img {
+            width:90%;
+          }
+        }
+        .rightPromo {
+          padding:20px 0 0 0;
+          flex:1 auto;
+          justify-content: right;
+          text-align:right;
+          margin-right:10px;
+          color:#ffefdf;
+          .whback {
+            display:flex;
+            flex-direction:row;
+            text-align:left;
+            background-color:#ffffff;
+            border-radius:10px;
+            min-width:200px;
+          }
+          .wheader {
+            text-align:left;
+            padding:20px 0 0 10px;
+            font-size:2.0em;
+            text-transform:uppercase;
+            color:#000030;
+            a {
+              color:#200f5f;
+            }
+            a:hover {
+              color: #c03070;
+              text-decoration:none;
+            }
+          }
+        }
+      }
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        text-align:left;
+        padding:10px;
+        background-color:$off-meri;
+        letter-spacing:.05em;
+        font-size:0.8em;
+      }
+      ul.skillpoints {
+        padding:7px 0 20px 10px;
+        margin:5px 0 0 0;
+        li {
+          font-family: Gudea, sans-serif;
+          font-size:0.8em;
+          margin:0 0 0.5em 0;
+          list-style: none;
+          padding:0 10px 0 0;
+          text-align:left;
+          color:#000030;
+        }
+      }
+    }
+
 
     &.contentHorizon2 {
       display:block;
@@ -687,6 +931,81 @@ div {
         padding-top:18px;
       }
     }
+
+    &.promoHorizon {
+      display:block;
+      width:100%;
+      background-color:#6aafc2;
+      color:#292929;
+      font-family:FjallaOne, Helvetica, sans-serif;
+      font-size:1.3em;
+      text-align:center;
+      margin:0 auto;
+      background-image: radial-gradient(
+                      50% 50% at 50% 50%,
+                      rgba(175, 215, 235, 0.75) 0%,
+                      rgba(105, 175, 195, 0) 100%
+      ),
+      linear-gradient(180deg, #5abfd2 0%, #6abfd2 15%, #6aafc2 50%);
+
+      .promoContent {
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        padding:17px 0 50px 10px;
+
+        .leftPromo {
+          flex:1 auto;
+          img {
+            width:85%;
+          }
+        }
+        .rightPromo {
+          padding:20px 0 0 0;
+          justify-content: center;
+          text-align:center;
+          margin-right:10px;
+          color:#ffefdf;
+          .whback {
+            display:block;
+            text-align:left;
+            background-color:#ffffff;
+            border-radius:10px;
+            min-width:300px;
+          }
+          .wheader {
+            text-align:left;
+            padding:20px 0 0 10px;
+            font-size:1.8em;
+            text-transform:uppercase;
+            color:#000030;
+          }
+        }
+      }
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        text-align:left;
+        padding:10px;
+        background-color:$off-meri;
+        letter-spacing:.05em;
+        font-size:0.9em;
+      }
+      ul.skillpoints {
+        padding:7px 0 20px 10px;
+        margin:5px 0 0 0;
+        li {
+          font-family: Gudea, sans-serif;
+          font-size:.9em;
+          margin:0 0 0.5em 0;
+          list-style: none;
+          padding:0 10px 0 0;
+          text-align:left;
+          color:#000030;
+        }
+      }
+    }
+
+
     &.contentHorizon2 {
       display:block;
       width:100%;
@@ -880,6 +1199,82 @@ div {
         font-size:.7em;
       }
     }
+
+
+    &.promoHorizon {
+      display:block;
+      width:100%;
+      background-color:#6aafc2;
+      color:#292929;
+      font-family:FjallaOne, Helvetica, sans-serif;
+      font-size:1.3em;
+      text-align:center;
+      margin:0 auto;
+      background-image: radial-gradient(
+                      50% 50% at 50% 50%,
+                      rgba(175, 215, 235, 0.75) 0%,
+                      rgba(105, 175, 195, 0) 100%
+      ),
+      linear-gradient(180deg, #5abfd2 0%, #6abfd2 15%, #6aafc2 50%);
+
+      .promoContent {
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        padding:17px 0 50px 10px;
+
+        .leftPromo {
+          flex:1 auto;
+          img {
+            width:85%;
+          }
+        }
+        .rightPromo {
+          padding:20px 0 0 0;
+          justify-content: center;
+          text-align:center;
+          margin-right:10px;
+          color:#ffefdf;
+          .whback {
+            display:block;
+            text-align:left;
+            background-color:#ffffff;
+            border-radius:10px;
+            min-width:300px;
+          }
+          .wheader {
+            text-align:left;
+            padding:20px 0 0 10px;
+            font-size:1.8em;
+            text-transform:uppercase;
+            color:#000030;
+          }
+        }
+      }
+      .skillHeader {
+        font-family: FjallaOne, Helvetica, sans-serif;
+        text-align:left;
+        padding:10px;
+        background-color:$off-meri;
+        letter-spacing:.05em;
+        font-size:0.8em;
+      }
+      ul.skillpoints {
+        padding:7px 0 20px 10px;
+        margin:5px 0 0 0;
+        li {
+          font-family: Gudea, sans-serif;
+          font-size:.8em;
+          margin:0 0 0.5em 0;
+          list-style: none;
+          padding:0 10px 0 0;
+          text-align:left;
+          color:#000030;
+        }
+      }
+    }
+
+
     &.contentHorizon2 {
       display:block;
       background-color:$flexHeader2;
@@ -1061,6 +1456,9 @@ div {
         font-size:.7em;
       }
     }
+
+
+
     &.contentHorizon2 {
       display:block;
       background-color:$flexHeader2;

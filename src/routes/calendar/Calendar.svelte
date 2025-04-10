@@ -113,7 +113,9 @@ const getDayCode = () => {
 
     let monthcode = monthcodes[month];
 
-    daycode = (tdy + d1 + monthcode + yearcode - 3 - isly) % 7;
+    const ughbyte = 3;
+
+    daycode = Math.round(tdy + d1 + monthcode + yearcode - ughbyte - isly) % 7;
 
     //console.log("DAYCODE: " + daycode);
 
@@ -152,7 +154,6 @@ for (let xxi = 0; xxi < daysForMonth; xxi++) {
 }
 
 //console.log('dfm');
-//console.log(dfmArr);
 
 let test = addCalendarButtons();
 //console.log(test);
@@ -165,6 +166,8 @@ let forEditor;
 today = months[arMonth] + " " + arDay + ", " + arYear;
 forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
 //console.log('for Edit: ' + forEditor);
+//console.log(daysForMonth + DayCode)
+let marchFix = false;
 
 </script>
 
@@ -187,9 +190,12 @@ forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
             {:else if j > 20 && j < 28}
                 <DatePanel posX={xk*dwidth} posY="330" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
                 <span>{xk = j - 21}</span>
-            {:else if j > 27 && j < (daysForMonth+DayCode)}
+            {:else if (j > 27 && j < (daysForMonth+DayCode)) && marchFix === false || (j > 27 && j < 35 && marchFix === true)}
                 <DatePanel posX={xm*dwidth} posY="440" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
                 <span>{xm = j - 28}</span>
+            {:else if j > 34 && marchFix === true && j < 37}
+                <DatePanel posX={xm*dwidth} posY="550" theDay={j+1-DayCode} dData={JSON.stringify({'month':arMonth, 'year':arYear}) } />
+                <span>{xm = j - 35}</span>
             {:else}
                 {#if j < DayCode}
                     <BlankPanel />
