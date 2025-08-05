@@ -15,9 +15,6 @@
 	uData = uData.slice(2);
 	iuData = uData.split('z0g');
 	izData = iuData[1].split('y0x');
-	//console.log("dat from edit1: " + iuData[0]);
-	//console.log("dat from edit2: " + izData[0]);
-	//console.log("dat from edit3: " + izData[1]);
 
 	let monthName = months[izData[0]];
 	let laDia = iuData[0];
