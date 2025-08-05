@@ -6,7 +6,7 @@
 ## SvelteJS with ThreeJS 
 https://svelte.dev
 
-This was an older version of the Gallantone.com website that used Svelte 4 on the frontend with a Go backend as an alternative to React before the version 19 release.  It's also the last time using Sass for CSS which is of course outdated now.
+In an attempt to use something other than React and React Router for the frontend, Svelte 4 was chosen and tested on the 2023 version of the Gallantone.com website. Svelte 4 on the frontend with a Go backend as an alternative to React before the version 19 release.  It lasted a year before returning to React which released a compiler with its version 19 update.  It's also the last time using Sass for CSS which is of course outdated now.
 The Svelte calendar used quill to edit tasks or whatever within each date.
 <br/>
    <img width="480" height="300" alt="Image" src="https://github.com/user-attachments/assets/0e7720c5-9c63-4fea-a3b0-d77442e3a4ff" />
