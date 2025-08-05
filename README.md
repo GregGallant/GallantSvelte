@@ -4,6 +4,7 @@
 <img width="500" height="144" alt="Image" src="https://github.com/user-attachments/assets/0521df9a-cf64-464f-bb35-d4b90247feb8" />
 
 ## SvelteJS with ThreeJS 
+https://svelte.dev
 
 This was an older version of the Gallantone.com website that used Svelte 4 on the frontend with a Go backend as an alternative to React before the version 19 release.  It's also the last time using Sass for CSS which is of course outdated now.
 The Svelte calendar used quill to edit tasks or whatever within each date.
