@@ -13,8 +13,6 @@ nnews = {newsObj}.newsObj;
 const highlightArticle = () => {
     newsid.style.setProperty('border', '2px solid #ffffff');
     newstextid.style.setProperty('background-color', '#303070');
- //   newsid.style.borderColor = "red";
-//    newstextid.style.backgroundColor = "#ffffff";
 };
 
 const dimArticle = () => {
@@ -23,9 +21,10 @@ const dimArticle = () => {
 }
 
 const accepted_title_length = 85;
-
 const regex19 = /\\u2019/gi;
 const squotes = /\\"/gi;
+
+// These were hacks on the Svelte side now handled on the Go side
 let article_title = nnews.thread.title_full.replaceAll("\\u0027", "'");
 article_title = article_title.replaceAll("\\uFFFD", "");
 article_title = article_title.replaceAll("\&quot;", "'");
