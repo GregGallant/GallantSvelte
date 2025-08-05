@@ -29,9 +29,9 @@
     /** @type {import('./$types').PageLoad} */
     const register = async () => {
 
+        // Postgres db testing
         let postURL = "http://127.0.0.1:8888/register";
-        //let postURL = "http://golang-ggc:8888/register";
-
+        
         let postReq = JSON.stringify({email,firstname, lastname, password, cpassword})
 
         console.log("POST REQ: " + postReq);
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-<!--
+
     <label for="username">Username</label><br/>
     <input ind:value={username} type="text" id="username" name="username" placeholder="Username" />
     <br/><br/>
@@ -88,7 +88,7 @@
     <input ind:value={password} type="password" id="password" name="password" placeholder="Password" />
     <br/><br/>
     <button type="submit">Login</button>
-    -->
+    
 
 <style lang="scss">
   form {
