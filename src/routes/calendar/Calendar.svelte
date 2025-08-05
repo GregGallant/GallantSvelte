@@ -28,13 +28,6 @@ arYear = now.getFullYear();
 
 const addCalendarButtons = () => {
 
-    // Get local client time
-    //console.log("Now obj: " + now);
-    //console.log("Date: " + now.getDate());
-    //console.log("Month: " + now.getMonth());
-    //console.log("Day" + now.getDay());
-
-
     // Calendar Header
     calhead = months[arMonth] + " " + arYear;
 
@@ -87,7 +80,6 @@ const getYearCode = (year) => {
 let daycode;
 
 // Determines where day of week sits
-// TODO: Confirm accurate
 const getDayCode = () => {
     let isly = 0;
 
@@ -104,7 +96,7 @@ const getDayCode = () => {
 
     let yearcode = getYearCode(arYear);
 
-    //double twodigityear = year % 100;  // modulus
+    //double twodigityear = year % 100;  // modulus via C#
     let twodigityear = arYear % 100;
 
     let tdy = twodigityear;
@@ -113,34 +105,14 @@ const getDayCode = () => {
 
     let monthcode = monthcodes[month];
 
-    const ughbyte = 3;
-
-    daycode = Math.round(tdy + d1 + monthcode + yearcode - ughbyte - isly) % 7;
-
-    //console.log("DAYCODE: " + daycode);
+    // Old functionality, fixed in newer versions and for React 
+    // This is where React and compound components would really help where fixed
+    daycode = Math.round(tdy + d1 + monthcode + yearcode - isly) % 7;
 
     return daycode;
 }
 
 let DayCode = getDayCode();
-
-// Positioning code
-/*
-       int daycode = getDayCode(myDate);
-        if (daycode != 0)
-        {
-            for (int dc = 0; dc <= daycode; dc++)
-            {
-                if (dc != (daycode))
-                {
-                    GameObject goop = Instantiate(blankPrefab) as GameObject;
-                    goop.transform.SetParent(buttonContainer);
-                } else {
-                    break;
-                }
-            }
-        }
- */
 
 let daysForMonth = days_in_month[arMonth];
 //console.log("DAYS FOR MONTH: " + daysForMonth);
@@ -153,10 +125,8 @@ for (let xxi = 0; xxi < daysForMonth; xxi++) {
     }
 }
 
-//console.log('dfm');
 
 let test = addCalendarButtons();
-//console.log(test);
 let xi = 0;
 let xj = 0;
 let xk = 0;
@@ -165,8 +135,6 @@ let forEditor;
 // Edit / Save data
 today = months[arMonth] + " " + arDay + ", " + arYear;
 forEditor = JSON.stringify({'day': arDay, 'month':arMonth, 'year':arYear});
-//console.log('for Edit: ' + forEditor);
-//console.log(daysForMonth + DayCode)
 let marchFix = false;
 
 </script>
@@ -178,7 +146,7 @@ let marchFix = false;
         <div class="dayOfWeek">{daysOfWeek[i]}</div>
     {/each}
 </div>
-<div class="calendarBoard"> <!-- TODO: leap year stuff -->
+<div class="calendarBoard"> <!-- leap year stuff (again, React was way better for things like this) -->
     <div class="calendarWrap">
         {#each dfmArr as dim, j}
             {#if j > 6 && j < 14}
