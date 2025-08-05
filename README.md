@@ -16,5 +16,4 @@ The Svelte calendar used quill to edit tasks or whatever within each date.
 			In regards to memory, their were a few issues to keep in mind.
 			<br/> 
    <br/>
-			While Svelte 4 was a very well designed framework, the lack of compound components while designing a calendar component was the first sign that it needed more functionality before being ready for primetime.  Svelte 5 brought about a lot of changes along with an update to handle compound components, however React 19 proved much more reliable in the end.
-		
+			While Svelte 4 was a very well designed framework, the lack of compound components while designing a calendar component was the first sign that it needed more functionality before being ready for primetime.  Svelte 5 brought about a lot of changes along with an update to handle compound components, however returning to React v19 proved much more reliable in the end.  This was not because Svelte was not a good framework, it was great.  This more had to do with having more experience with React allowing for cleaner code and component organization.		
