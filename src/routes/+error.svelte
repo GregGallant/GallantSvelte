@@ -6,7 +6,7 @@
         </div>
     </div>
 </div>
-
+<!-- Svelte used inline styles which I'm not a fan of, this type of styling creates a mess quickly.  Better off using raw CSS or Tailwind. -->
 <style lang="scss">
 
     .errWrap {
